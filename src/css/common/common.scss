@@ -1,6 +1,6 @@
 body {
 	background: $white;
-	max-width: 1920px;
+	max-width: 1440px;
 	margin: 0 auto;
 	display: flex;
 	flex-flow: column;
@@ -22,4 +22,8 @@ body {
 
 .hide {
 	display: none !important;
+}
+
+.img__item {
+	object-fit: cover;
 }

@@ -10,9 +10,17 @@
     <script type="text/javascript" defer src="js/script.js"></script>
   </head>
   <body>
-    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute;" aria-hidden="true" focusable="false"></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute;" aria-hidden="true" focusable="false">
+      <symbol id="search" viewBox="0 0 21 21">
+        <path d="M14.531 12.461a7.897 7.897 0 1 0-12.89-9.126 7.896 7.896 0 0 0 10.461 11.363l5.823 5.788a1.653 1.653 0 1 0 2.337-2.337l-5.73-5.688zm-6.45.54a5.094 5.094 0 0 1-.004-10.186 5.093 5.093 0 0 1 .008 10.186H8.08z"></path>
+      </symbol>
+    </svg>
     <div class="wrapper">
-      <header class="header"></header>
+      <header class="header"><a class="btn btn--burger" href="#">
+          <div class="btn__lines"><small class="btn__line btn__line--top"></small><small class="btn__line btn__line--mid"></small><small class="btn__line btn__line--bot"></small></div></a><a class="logo img" href="/"><img class="img__item" src="img/logo.png" alt="logo"></a><a class="btn btn--search" href="#">
+          <svg class="icon icon--search">
+            <use class="icon__item" xlink:href="#search"></use>
+          </svg></a></header>
       <main class="main">
         <section class="represent"></section>
       </main>

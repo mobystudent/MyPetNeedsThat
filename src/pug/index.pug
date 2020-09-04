@@ -31,8 +31,44 @@ block content
 								.prize__icon
 								h3.prize__title=prizeTitle[i]
 								picture.prize__img.img
-									img.img__item.img__item--prize(src=`img/shampoo-${i+1}.png` alt=`shampoo-${i+1}`)
+									img.img__item(src=`img/shampoo-${i+1}.png` alt=`shampoo-${i+1}`)
 								p.prize__descrip=prizeDescrip[i]
 								a.bnt.btn--prize(href="#") check latest price
+								
+			section.section.setion--review
+				.container.container--small
+					.section__wrap.section__wrap--review
+						article.review
+							.review__author
+								picture.review__avatar.img
+									img.img__item(src="img/avatar.png" alt="user avatar")
+								.review__wrap
+									p.review__user
+										span.review__guide Your guide to this review today is by veterinarian
+										span.review__name Dr. Tracy douglas
+									time.time.time--review(datetime="17:06") Published 17:06 pm
+								a.btn.btn--review(href="#") Hide Contects
+								
+							article.recommend
+								h2.recommend__title Contents
+								ol.recommend__list
+									li.recommend__item The Best Dog Shampoo
+									li.recommend__item 1. Pro Pet Works All Natural Oatmeal Dog Shampoo and Conditioner
+									li.recommend__item 2. Veterinary Formula Professional Dog Shampoo
+									li.recommend__item 3. Earthbath All Natural Organic Dog Shampoo
+									li.recommend__item 4. Honeydew Colloidal Oatmeal Dog Shampoo
+									li.recommend__item 5. Furminator deShedding Premium Pet Shampoo
+									li.recommend__item 6. Douxo Chlorhexidine PS + Climbazole Pet Shampoo
+									li.recommend__item 7. Bexley Labs Curaseb Shampoo for Dogs
+									li.recommend__item 8. Fieldworks Supply Natural Dog Wash
+									li.recommend__item 9. Wahl Lavender Waterless No Rinse Pet Shampoo
+									li.recommend__item 10. Paws & Pals Natural Dog Shampoo and Conditioner
+									li.recommend__item 11. Nootie Oatmeal Dog Wash with Soothing Aloe
+									li.recommend__item 12. Burt’s Bees Tearless Puppy Shampoo
+									li.recommend__item 13. 4-Legger Certified Organic Dog Shampoo
+									li.recommend__item 14. Wahl Color Bright Dog Shampoo
+									li.recommend__item 15. Vet’s Best Allergy Itch Relief Dog Shampoo
+							.content
+								p Dog shampoos are important #[a(href="#") canine care products] that are geared primarily for the maintenance of their hygiene. Some products actually come with different formulations to help in the control and management of pests like fleas and ticks. However useful, some canine shampoos contain harsh ingredients that may pose a threat to your #[a(href="#") pet’s health]. It is therefore, important for you to learn how to choose the correct hair care product for your pet. We have researched the market for the best dog shampoo to help you get started.
 				
 		include footer.pug

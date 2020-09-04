@@ -18,6 +18,18 @@ body {
 	z-index: 0;
 	overflow: hidden;
 	background: $white;
+
+	// &:before {
+	// 	content: '';
+	// 	position: absolute;
+	// 	top: 1430px;
+	// 	left: 0;
+	// 	width: 1556px;
+	// 	height: 13230px;
+	// 	background: url("../img/main-bg.png") no-repeat;
+	// 	background-size: contain;
+	// 	z-index: -1;
+	// }
 }
 
 .hide {
@@ -25,8 +37,6 @@ body {
 }
 
 .img__item {
-	&--prize {
-		height: 100%;
-		object-fit: contain;
-	}
+	height: 100%;
+	object-fit: contain;
 }

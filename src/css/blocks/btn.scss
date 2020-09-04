@@ -39,6 +39,26 @@
 		}
 	}
 
+	&--review {
+		font: 17px/125% $ProximaNovaSoftBold;
+		letter-spacing: .03em;
+		color: $pink;
+		grid-column: 2;
+		grid-row: 2;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			height: 12px;
+			width: 135px;
+			background: $dimYellow;
+			z-index: -1;
+		}
+	}
+
 	&__lines {
 		display: flex;
 		position: relative;

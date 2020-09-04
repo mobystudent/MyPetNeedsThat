@@ -25,5 +25,8 @@ body {
 }
 
 .img__item {
-	object-fit: cover;
+	&--prize {
+		height: 100%;
+		object-fit: contain;
+	}
 }

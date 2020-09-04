@@ -17,6 +17,22 @@ block content
 							a.breadcrums__link(href="#") Grooming
 						h1.title.title--page The Best Dog Shampoo (Review) in 2020
 						time.time.time--page(datetime="2020-04-10") Last Update: 10 Apr 2020
-					
+						
+			section.section.section--prizes
+				.container
+					.section__wrap.section__wrap--prizes
+						
+						- const prizeTitle = ['Best Choice', 'Premium Pick', 'Best Value'];
+						- const prizeDescrip = ['Pro Pet Works All Natural Oatmeal Dog Shampoo', 'Douxo Chlorhexidine PS + Climbazole Shampoo', 'Wahl Color Bright Dog Shampoo'];
+						
+						- for (let i = 0; i < 3; i++)
+						
+							.prize
+								.prize__icon
+								h3.prize__title=prizeTitle[i]
+								picture.prize__img.img
+									img.img__item.img__item--prize(src=`img/shampoo-${i+1}.png` alt=`shampoo-${i+1}`)
+								p.prize__descrip=prizeDescrip[i]
+								a.bnt.btn--prize(href="#") check latest price
 				
 		include footer.pug

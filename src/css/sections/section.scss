@@ -2,6 +2,15 @@
 	position: relative;
 
 	&--page-header {
+		background: $lightGreen;
 		padding: 40px 0 25px;
+		margin-bottom: 85px;
+	}
+
+	&__wrap {
+		&--prizes {
+			display: flex;
+			margin-right: -30px;
+		}
 	}
 }

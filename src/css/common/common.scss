@@ -1,4 +1,5 @@
 body {
+	background: $white;
 	max-width: 1920px;
 	margin: 0 auto;
 	display: flex;
@@ -16,6 +17,7 @@ body {
 	position: relative;
 	z-index: 0;
 	overflow: hidden;
+	background: $white;
 }
 
 .hide {

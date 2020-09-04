@@ -1,0 +1,35 @@
+{
+  "name": "MyPetNeedsThat",
+  "version": "1.0.0",
+  "description": "Окружение для разработки веб-проектов",
+  "main": "index.js",
+  "scripts": {
+    "watch": "gulp watch --dev",
+    "prodwatch": "gulp watch",
+    "devbuild": "gulp --dev",
+    "build": "gulp",
+    "clean": "gulp clean"
+  },
+  "keywords": [],
+  "author": "mobystudent",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/node": "^7.8.7",
+    "@babel/polyfill": "^7.8.7",
+    "jquery": "^3.4.1"
+  }
+}

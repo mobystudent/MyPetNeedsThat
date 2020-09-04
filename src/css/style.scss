@@ -1,0 +1,31 @@
+/*
+Theme Name: Front-end theme
+Author: mobystudent
+Description:
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+//Reset
+@import "common/reset.scss";
+
+//Variables & mixins
+@import "helpers/colors.scss";
+@import "helpers/fonts.scss";
+
+//Defaults
+@import "common/common.scss";
+
+//Plugin styles
+@import "vendors/slick.scss";
+
+//Blocks
+@import "blocks/btn.scss";
+@import "blocks/icon.scss";
+
+//Sections
+@import "sections/header.scss";
+@import "sections/footer.scss";
+@import "sections/represent.scss";
+@import "sections/section.scss";

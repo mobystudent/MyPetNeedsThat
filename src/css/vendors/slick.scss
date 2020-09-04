@@ -1,0 +1,19 @@
+.slick {
+	&-track {
+		display: flex;
+	}
+
+	&-arrow {
+		font-size: 0;
+	}
+}
+
+.slider {
+	.slick-initialized .slick-slide {
+		display: flex;
+	}
+
+	.slick-arrow.slick-hidden {
+		display: flex;
+	}
+}

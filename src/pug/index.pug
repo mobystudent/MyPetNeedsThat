@@ -8,6 +8,15 @@ block content
 		include header.pug
 
 		main.main
-			section.represent
+			section.section--page-header
+				.container
+					.section__wrap.section__wrap--page-header
+						article.breadcrums
+							a.breadcrums__link(href="#") Home
+							a.breadcrums__link(href="#") Dogs
+							a.breadcrums__link(href="#") Grooming
+						h1.title.title--page The Best Dog Shampoo (Review) in 2020
+						time.time.time--page(datetime="2020-04-10") Last Update: 10 Apr 2020
+					
 				
 		include footer.pug

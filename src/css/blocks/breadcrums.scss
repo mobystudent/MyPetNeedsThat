@@ -1,0 +1,27 @@
+.breadcrums {
+	display: flex;
+	margin-bottom: 50px;
+
+	&__link {
+		display: inline-block;
+		color: $darkGreen;
+		font: 16px/150% $ProximaNovaSoftBold;
+		opacity: .5;
+
+		&:not(:last-child) {
+			margin-right: 20px;
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50px;
+				left: 5px;
+				width: 3px;
+				height: 6px;
+				background: url("../img/arrow.svg") no-repeat;
+				background-size: cover;
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+.title {
+	&--page {
+		color: $darkGreen;
+		font: 50px/120% $ProximaNovaSoftBold;
+		letter-spacing: .02em;
+		margin-bottom: 15px;
+		max-width: 600px;
+	}
+}

@@ -6,4 +6,15 @@
 		margin-bottom: 15px;
 		max-width: 600px;
 	}
+
+	&--section {
+		font: 38px/120% $ProximaNovaSoftBold;
+		letter-spacing: .02em;
+		color: $darkGreen;
+
+		&-shampoo {
+			padding-left: 200px;
+			margin-bottom: 70px;
+		}
+	}
 }

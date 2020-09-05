@@ -1,0 +1,146 @@
+.shampoo {
+	&:not(:last-child) {
+		margin-bottom: 150px;
+	}
+
+	&--left {
+		margin-left: -35px;
+
+		.shampoo__wrap-img {
+			margin-right: 30px;
+		}
+	}
+
+	&--right {
+		margin-right: -35px;
+
+		.shampoo__content {
+			order: 1;
+		}
+
+		.shampoo__wrap-img {
+			margin-left: 30px;
+			order: 2;
+		}
+	}
+
+	&__wrap {
+		display: flex;
+		margin-bottom: 70px;
+	}
+
+	&__wrap-img {
+		flex: 0 0 auto;
+		position: relative;
+		width: 500px;
+		height: 500px;
+		border-radius: 50%;
+		border: 40px solid $lightWhiteGreen;
+		background: $white;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 440px;
+			height: 620px;
+			transform: translate(-48%, -53%);
+			background: url("../img/shampoo-bg.png") no-repeat;
+			background-size: cover;
+			z-index: -1;
+		}
+	}
+
+	&__img {
+		border-radius: 50%;
+		overflow: hidden;
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		padding: 40px;
+	}
+
+	&__blocks {
+		display: flex;
+	}
+
+	&__content {
+		flex: 1 1 auto;
+	}
+
+	&__descrip {
+		margin-bottom: 40px;
+	}
+
+	&__title {
+		align-items: center;
+		letter-spacing: .02em;
+		color: $dimGreen;
+
+		&--main {
+			font: 32px/120% $ProximaNovaSoftBold;
+			margin-bottom: 20px;
+		}
+
+		&--block {
+			font: 20px/120% $ProximaNovaSoftBold;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__text {
+		font: 18px/125% $ProximaNovaSoftRegular;
+		color: $darkGreen;
+	}
+
+	&__block {
+		&--features {
+			margin-right: 35px;
+			width: 55%;
+			max-width: 370px;
+		}
+	}
+
+	&__item {
+		&--features {
+			font: 18px/125% $ProximaNovaSoftRegular;
+			color: $darkGreen;
+			text-indent: 10px;
+			position: relative;
+
+			&:not(:last-child) {
+				margin-bottom: 2px;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 12px;
+				left: 0;
+				width: 4px;
+				height: 4px;
+				border-radius: 50%;
+				background: $darkGreen;
+			}
+		}
+
+		&--specif {
+			color: $darkGreen;
+
+			&:not(:last-child) {
+				margin-bottom: 25px;
+			}
+		}
+	}
+
+	&__name {
+		font: 18px/125% $ProximaNovaSoftBold;
+		display: inline-block;
+		padding-right: 10px;
+	}
+
+	&__value {
+		font: 18px/125% $ProximaNovaSoftRegular;
+	}
+}

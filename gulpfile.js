@@ -8,7 +8,8 @@ const gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	groupcmq = require('gulp-group-css-media-queries'),
 	sourcemaps = require('gulp-sourcemaps'),
-	browserSync = require('browser-sync').create();
+	browserSync = require('browser-sync').create(),
+	fs = require('fs');
 
 /* settings */
 const dirBuild = 'build',
@@ -21,7 +22,8 @@ const dirBuild = 'build',
 			fonts: dirBuild + '/fonts',
 			favicon: dirBuild + '/favicon',
 			img: dirBuild + '/img',
-			js: dirBuild + '/js'
+			js: dirBuild + '/js',
+			data: dirBuild + '/data'
 		},
 		src: {
 			html: dirSrc + '/template/*.html',
@@ -30,7 +32,8 @@ const dirBuild = 'build',
 			fonts: dirSrc + '/fonts/**/*',
 			favicon: dirSrc + '/favicon/*',
 			img: dirSrc + '/img/**/*',
-			js: dirSrc + '/js/script.js'
+			js: dirSrc + '/js/script.js',
+			data: dirSrc + '/data/data.json'
 		},
 		watch: {
 			html: dirSrc + '/template/**/*.html',
@@ -39,7 +42,8 @@ const dirBuild = 'build',
 			fonts: dirSrc + '/fonts/**/*',
 			favicon: dirSrc + '/favicon/*',
 			img: dirSrc + '/img/**/*',
-			js: dirSrc + '/js/**/*.js'
+			js: dirSrc + '/js/**/*.js',
+			data: dirSrc + '/data/**/*.json'
 		}
 	};
 
@@ -73,9 +77,11 @@ function gulpFonts() {
 
 /* coplite pug files in html folder */
 function gulpPug() {
+	const dataFromFile = JSON.parse(fs.readFileSync(path.src.data));
 	return gulp.src(path.src.pug)
 		.pipe(pug({
-			pretty: true
+			pretty: true,
+			locals: dataFromFile || {}
 		}))
 		.pipe(gulp.dest(path.build.pug));
 }
@@ -109,6 +115,12 @@ function gulpJS() {
 		.pipe(gulp.dest(path.build.js));
 }
 
+/* testing data to html */
+function gulpData() {
+	return gulp.src(path.src.data)
+		.pipe(gulp.dest(path.build.data));
+}
+
 /* watch src files and show changes in browser */
 function gulpWatch() {
 	browserSync.init({
@@ -122,9 +134,10 @@ function gulpWatch() {
 	gulp.watch(path.watch.img, gulp.series(gulpImages));
 	gulp.watch(path.watch.favicon, gulp.series(gulpFavicon));
 	gulp.watch(path.watch.js, gulp.series(gulpJS));
+	gulp.watch(path.watch.data, gulp.series(gulpData));
 }
 
-const dev = gulp.series(clean, gulp.parallel(gulpSass, gulpHTML, gulpPug, gulpFonts, gulpFavicon, gulpJS)),
+const dev = gulp.series(clean, gulp.parallel(gulpSass, gulpHTML, gulpPug, gulpFonts, gulpFavicon, gulpJS, gulpImages, gulpData)),
 	build = gulp.series(clean, gulp.parallel(gulpSass, gulpHTML, gulpFonts, gulpFavicon, gulpJS, gulpImages));
 
 exports.default = build;
@@ -134,3 +147,4 @@ exports.clean = clean;
 exports.js = gulpJS;
 exports.img = gulpImages;
 exports.fonts = gulpFonts;
+exports.data = gulpData;

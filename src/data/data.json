@@ -1,0 +1,61 @@
+{
+	"prize": [
+		{
+			"title": "Best Choice",
+			"descrip": "Pro Pet Works All Natural Oatmeal Dog Shampoo",
+			"img": "shampoo-1"
+		},
+		{
+			"title": "Premium Pick",
+			"descrip": "Douxo Chlorhexidine PS + Climbazole Shampoo",
+			"img": "shampoo-2"
+		},
+		{
+			"title": "Best Value",
+			"descrip": "Wahl Color Bright Dog Shampoo",
+			"img": "shampoo-3"
+		}
+	],
+	"recommend": ["The Best Dog Shampoo", "1. Pro Pet Works All Natural Oatmeal Dog Shampoo and Conditioner", "2. Veterinary Formula Professional Dog Shampoo", "3. Earthbath All Natural Organic Dog Shampoo", "4. Honeydew Colloidal Oatmeal Dog Shampoo", "5. Furminator deShedding Premium Pet Shampoo", "6. Douxo Chlorhexidine PS + Climbazole Pet Shampoo", "7. Bexley Labs Curaseb Shampoo for Dogs", "8. Fieldworks Supply Natural Dog Wash", "9. Wahl Lavender Waterless No Rinse Pet Shampoo", "10. Paws & Pals Natural Dog Shampoo and Conditioner", "11. Nootie Oatmeal Dog Wash with Soothing Aloe", "12. Burt’s Bees Tearless Puppy Shampoo", "13. 4-Legger Certified Organic Dog Shampoo", "14. Wahl Color Bright Dog Shampoo", "Vet’s Best Allergy Itch Relief Dog Shampoo"],
+	"shampoo": [
+		{
+			"title": "Pro Pet Works All Natural Oatmeal Dog Shampoo and Conditioner",
+			"descrip": "Designed to be the best hypoallergenic dog shampoo, the Pro Pet Works Organic Oatmeal and Aloe canine hair care product comes enriched with vitamins to help improve the overall health of your pooch’s coat while also making sure it is safe for canines with allergies. It is both soothing and therapeutic, giving your pet’s skin to regenerate and its coat to grow to its optimum health. It’s ideal for restoring the natural oils in your pet’s coat, reliving itchiness and dry skin, conditioning and moisturizing its coat, and soothing its sensitive skin.",
+			"img": "shampoo-1",
+			"features": ["Contains oatmeal, almond oil, and aloe vera and other natural and organic ingredients","Enriched with vitamins and amino acids", "Contains no artificial fragrance, soap, alcohol, and irritants", "Formulated for sensitive and dry skin", "Top dog shampoo for itchy skin"],
+			"specifications": {
+				"Brand": "Pro Pet Works",
+				"Model": "k3710",
+				"Weght": "1 pounds"
+			},
+			"pros": ["Reduce Shedding", "Prevents irritation of the skin", "Moistorizes the skin"],
+			"cons": ["Using too much can irritate your dog skin", "Might not work for dogs that are allergic to certain ingridients"]
+		},
+		{
+			"title": "Veterinary Formula Professional Dog Shampoo",
+			"descrip": "Veterinary Formula Clinical Care is a unique medicated shampoo for dogs that is specific for parasitic organisms, although it is also effective against bacterial and fungal species. Aside from its antiparasitic properties, Veterinary Formula is also formulated to treat seborrheic dermatitis which is often characterized by severe skin inflammation, waxy or greasy integument, and dry, flaky, scaly skin resembling dandruff. It’s also one of the top rated dog shampoo in the market today.",
+			"img": "shampoo-2",
+			"features": ["Especially formulated for canine seborrheic dermatitis"," Contains salicylic acid and micronized sulfur", "Contains oatmeal and natural coconut oil-based cleansers", "Antibacterial, antifungal, and antiparasitic properties"],
+			"specifications": {
+				"Brand": "Veterinary Formula Clinical Care",
+				"Model": "FG01315",
+				"Weght": "1.15 pounds"
+			},
+			"pros": ["Reduce Shedding", "Prevents irritation of the skin", "Moistorizes the skin"],
+			"cons": ["Using too much can irritate your dog skin", "Might not work for dogs that are allergic to certain ingridients"]
+		},
+		{
+			"title": "Earthbath All Natural Organic Dog Shampoo",
+			"descrip": "Looking for organic dog shampoo? Look no further as Earthbath is here. Earthbath boasts of a unique blend of all-natural ingredients that will not irritate your pet’s skin. Its formulation is 100% biodegradable ensuring safety in the environment. Earthbath is available in a variety of natural blends such as oatmeal and aloe, peppermint and eucalyptus, and tea tree and aloe, just to name a few. This gives your pooch a lingering fragrance that keeps your pet smelling fresh naturally.",
+			"img": "shampoo-3",
+			"features": ["Contains oatmeal, aloe vera, plant-derived cleaners, and vitamins", "For use on sensitive, itchy, and dry skin", "pH-balanced, natural, and soap-free formulation", "Pleasantly mild, non-irritating smell", "Best smelling dog shampoo"],
+			"specifications": {
+				"Brand": "Earthbath",
+				"Model": "THREP0034",
+				"Weght": "1.06 pounds"
+			},
+			"pros": ["Reduce Shedding", "Prevents irritation of the skin", "Moistorizes the skin"],
+			"cons": ["Using too much can irritate your dog skin", "Might not work for dogs that are allergic to certain ingridients"]
+		}
+	]
+}

@@ -15,10 +15,24 @@
 		margin-bottom: 115px;
 	}
 
+	&--shampoo {
+		// margin-bottom: 100px;
+		margin-bottom: 140px;
+	}
+
 	&__wrap {
 		&--prizes {
 			display: flex;
 			margin-right: -30px;
+		}
+
+		&--context {
+			margin-bottom: 70px;
+		}
+
+		&--author {
+			border-top: 1px solid rgba(30, 144, 122, 0.2);
+			padding-top: 10px;
 		}
 	}
 }

@@ -3,6 +3,7 @@
 		display: grid;
 		grid-template-columns: 1fr 8fr;
 		margin-bottom: 55px;
+		justify-items: start;
 	}
 
 	&__avatar {

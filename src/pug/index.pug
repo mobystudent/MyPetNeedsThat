@@ -32,7 +32,7 @@ block content
 								picture.prize__img.img
 									img.img__item(src=`img/${prizeImg}.png` alt=`${prizeImg}`)
 								p.prize__descrip=prizeDescrip
-								a.bnt.btn--prize(href="#") check latest price
+								a.bnt.btn--main(href="#") check latest price
 								
 			section.section.section--review
 				.container.container--small
@@ -117,7 +117,7 @@ block content
 											
 												li.action__item=cons[k]
 												
-								a.bnt.btn--prize(href="#") check latest price
+								a.bnt.btn--main(href="#") check latest price
 								
 			section.section.section--context
 				.container.container--small
@@ -170,6 +170,24 @@ block content
 									span.author__name dr. Tracy Douglas
 									span.author__position General Veterinarian
 								p.author__descrip General Practice Veterinarian, currently working at the Glenwood Veterinary Clinic, Glenwood Springs, Colorado. #[br]Dr. Douglas began her veterinary career as a Veterinary Nurse in Highton Veterinary Clinic, Highton Victoria, and then as an Emergency Veterinarian in Uintah Pet Emergency, Colorado Springs, Colorado. Tracy is particularly interested in surgery, neurology and internal medicine, which gives her a well-rounded knowledge on animal health and well-being. She received her Doctorate of Veterinary Medicine from the University of Melbourne, while her undergraduate bachelor of science is from the United States Military Academy at West Point, New York.
+								
+			section.section.section--faq.faq
+				.container
+					.section__wrap.section__wrap--faq
+						h2.title.title--section.title--section-faq Frequelntly Asked Questions
+						p.faq__descrip We have selected the most popular questiond of our users. Take a look, maybe it will be interesting for you too.
+						.faq__content
+							
+							- for (let i = 0; i < faq.length; i++)
+							
+								- const { title: faqTitle = '', descrip: faqDescrip = '' } = faq[i];
+							
+								.faq__item
+									header.faq__header
+										h3.faq__title=faqTitle
+									.faq__wrap
+										p.faq__text=faqDescrip
+										
+						a.btn.btn--main.btn--main-faq(href="#") show more
 
-				
 		include footer.pug

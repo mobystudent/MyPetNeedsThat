@@ -16,8 +16,15 @@
 	}
 
 	&--shampoo {
-		// margin-bottom: 100px;
-		margin-bottom: 140px;
+		margin-bottom: 100px;
+	}
+
+	&--context {
+		margin-bottom: 200px;
+	}
+
+	&--faq {
+		margin-bottom: 200px;
 	}
 
 	&__wrap {
@@ -33,6 +40,22 @@
 		&--author {
 			border-top: 1px solid rgba(30, 144, 122, 0.2);
 			padding-top: 10px;
+		}
+
+		&--faq {
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 20px;
+				right: -50px;
+				width: 505px;
+				height: 670px;
+				background: url("../img/dog.png") no-repeat;
+				background-size: cover;
+				z-index: -1;
+			}
 		}
 	}
 }

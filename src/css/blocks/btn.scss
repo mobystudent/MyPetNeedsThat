@@ -11,7 +11,7 @@
 		height: 21px;
 	}
 
-	&--prize {
+	&--main {
 		color: $white;
 		letter-spacing: .05em;
 		text-align: center;
@@ -25,6 +25,13 @@
 		text-transform: uppercase;
 		position: relative;
 		display: block;
+
+		&-faq {
+			margin-left: 5px;
+			max-width: 195px;
+			letter-spacing: .07em;
+			padding: 10px 5px;
+		}
 
 		&:before {
 			content: '';

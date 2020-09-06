@@ -57,5 +57,23 @@
 			"pros": ["Reduce Shedding", "Prevents irritation of the skin", "Moistorizes the skin"],
 			"cons": ["Using too much can irritate your dog skin", "Might not work for dogs that are allergic to certain ingridients"]
 		}
+	],
+	"faq" : [
+		{
+			"title": "1. How often should I clean out my new pet?",
+			"descrip": "You should clean your pet out at least once or twice a week. A regular clean out not only provides a hygienic and safe environment for your pet but also the ideal opportunity to bond with them and check them over."
+		},
+		{
+			"title": "2. How old do I need to be to purchase a pet from you?",
+			"descrip": "You should clean your pet out at least once or twice a week. A regular clean out not only provides a hygienic and safe environment for your pet but also the ideal opportunity to bond with them and check them over."
+		},
+		{
+			"title": "3. My pet doesn’t seem well what should I do?",
+			"descrip": "You should clean your pet out at least once or twice a week. A regular clean out not only provides a hygienic and safe environment for your pet but also the ideal opportunity to bond with them and check them over."
+		},
+		{
+			"title": "4. What is the best diet to feed my new pet?",
+			"descrip": "You should clean your pet out at least once or twice a week. A regular clean out not only provides a hygienic and safe environment for your pet but also the ideal opportunity to bond with them and check them over."
+		}
 	]
 }

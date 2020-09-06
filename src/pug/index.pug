@@ -9,14 +9,14 @@ block content
 		include header.pug
 
 		main.main
-			section.section--page-header
+			section.section.section--page-header
 				.container
 					.section__wrap.section__wrap--page-header
 						article.breadcrums
 							a.breadcrums__link(href="#") Home
 							a.breadcrums__link(href="#") Dogs
 							a.breadcrums__link(href="#") Grooming
-						h1.title.title--page The Best Dog Shampoo (Review) in 2020
+						h1.section__title.section__title--main The Best Dog Shampoo (Review) in 2020
 						time.time.time--page(datetime="2020-04-10") Last Update: 10 Apr 2020
 						
 			section.section.section--prizes
@@ -46,7 +46,7 @@ block content
 										span.review__guide Your guide to this review today is by veterinarian
 										span.review__name Dr. Tracy douglas
 									time.time.time--review(datetime="17:06") Published 17:06 pm
-								a.btn.btn--review(href="#") Hide Contects
+								a.btn.btn--inline.btn--inline-review(href="#") Hide Contects
 								
 							article.recommend
 								h2.recommend__title Contents
@@ -62,7 +62,7 @@ block content
 			section.section.section--shampoo
 				.container
 					.section__wrap.section__wrap--shampoo
-						h2.title.title--section.title--section-shampoo  The Best Dog Shampoos
+						h2.section__title.section__title--shampoo  The Best Dog Shampoos
 						
 						- const specifFields = ['Brand', 'Model', 'Weght'];
 						- const actionTitle = ['pros', 'cons'];
@@ -174,8 +174,8 @@ block content
 			section.section.section--faq.faq
 				.container
 					.section__wrap.section__wrap--faq
-						h2.title.title--section.title--section-faq Frequelntly Asked Questions
-						p.faq__descrip We have selected the most popular questiond of our users. Take a look, maybe it will be interesting for you too.
+						h2.section__title.section__title--faq Frequelntly Asked Questions
+						p.section__subtitle.section__subtitle--faq We have selected the most popular questiond of our users. Take a look, maybe it will be interesting for you too.
 						.faq__content
 							
 							- for (let i = 0; i < faq.length; i++)
@@ -189,5 +189,29 @@ block content
 										p.faq__text=faqDescrip
 										
 						a.btn.btn--main.btn--main-faq(href="#") show more
+						
+			section.section.section--related
+				.container
+					.section__wrap.section__wrap--related
+						h2.section__title.section__title--related Related Posts
+						p.section__subtitle.section__subtitle--related We have selected the top related posts for our users. Take a look, maybe it will be interesting for you too.
+						
+						.section__wrap.section__wrap--post
+							
+							- for (let i = 0; i < post.length; i++)
+							
+								- const { title: postTitle = '', descrip: postDescrip = '', img: postImg = '' } = post[i];
+							
+								article.post
+									picture.post__img.img
+										img.img__item(src=`img/${postImg}.png` alt=`${postImg}`)
+									.post__content
+										.post__wrap
+											h3.post__title=postTitle
+											p.post__descrip=postDescrip
+										a.btn.btn--inline.btn--inline-post(href="#") Read More
+											small.btn__plus
+									
+							
 
 		include footer.pug

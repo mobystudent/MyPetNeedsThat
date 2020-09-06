@@ -12,12 +12,6 @@
 		transform: skewY(3deg);
 		z-index: -1;
 	}
-	&__descrip {
-		font: 18px/125% $ProximaNovaSoftBold;
-		color: $dimGreen;
-		margin-bottom: 35px;
-		max-width: 500px;
-	}
 
 	&__content {
 		background: $white;

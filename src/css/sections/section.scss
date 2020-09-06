@@ -24,7 +24,11 @@
 	}
 
 	&--faq {
-		margin-bottom: 200px;
+		margin-bottom: 185px;
+	}
+
+	&--related {
+		margin-bottom: 105px;
 	}
 
 	&__wrap {
@@ -56,6 +60,52 @@
 				background-size: cover;
 				z-index: -1;
 			}
+		}
+
+		&--post {
+			display: flex;
+		}
+	}
+
+	&__title {
+		font: 38px/120% $ProximaNovaSoftBold;
+		letter-spacing: .02em;
+		color: $darkGreen;
+
+		&--main {
+			font-size: 50px;
+			margin-bottom: 15px;
+			max-width: 600px;
+		}
+
+		&--shampoo {
+			padding-left: 200px;
+			margin-bottom: 70px;
+		}
+
+		&--faq {
+			margin-bottom: 30px;
+		}
+
+		&--related {
+			text-align: center;
+			margin-bottom: 25px;
+		}
+	}
+
+	&__subtitle {
+		font: 18px/125% $ProximaNovaSoftBold;
+		color: $dimGreen;
+		margin-bottom: 35px;
+
+		&--faq {
+			max-width: 500px;
+		}
+
+		&--related {
+			max-width: 670px;
+			text-align: center;
+			margin: 0 auto 50px;
 		}
 	}
 }

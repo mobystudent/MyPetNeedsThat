@@ -75,5 +75,27 @@
 			"title": "4. What is the best diet to feed my new pet?",
 			"descrip": "You should clean your pet out at least once or twice a week. A regular clean out not only provides a hygienic and safe environment for your pet but also the ideal opportunity to bond with them and check them over."
 		}
+	],
+	"post": [
+		{
+			"title": "10 Tips for Taking a Road Trip With Your Dog",
+			"descrip": "There are few things as fun and relaxing as taking a road trip...",
+			"img": "post-1"
+		},
+		{
+			"title": "Pitbul Mastiff Mix: Facts & Temperament",
+			"descrip": "Pitbull Mastiff is a big dog that also looks tough to strangers...",
+			"img": "post-2"
+		},
+		{
+			"title": "How Many Teeth Do Adoult dogs Have?",
+			"descrip": "The anatomy of a dog is fascinating because every part...",
+			"img": "post-3"
+		},
+		{
+			"title": "The Best Cat Litter (Rewiew) in 2020",
+			"descrip": "While it’s true that we all love our cats to the moon and back...",
+			"img": "post-4"
+		}
 	]
 }

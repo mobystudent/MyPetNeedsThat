@@ -26,7 +26,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import "blocks/logo.scss";
 @import "blocks/container.scss";
 @import "blocks/breadcrums.scss";
-@import "blocks/title.scss";
 @import "blocks/time.scss";
 @import "blocks/prize.scss";
 @import "blocks/review.scss";
@@ -36,10 +35,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import "blocks/action.scss";
 @import "blocks/author.scss";
 @import "blocks/social.scss";
+@import "blocks/post.scss";
 
 //Sections
 @import "sections/header.scss";
 @import "sections/footer.scss";
-@import "sections/page-header.scss";
 @import "sections/section.scss";
 @import "sections/faq.scss";

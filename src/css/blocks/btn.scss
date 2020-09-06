@@ -46,13 +46,20 @@
 		}
 	}
 
-	&--review {
+	&--inline {
 		font: 17px/125% $ProximaNovaSoftBold;
 		letter-spacing: .03em;
 		color: $pink;
-		grid-column: 2;
-		grid-row: 2;
 		position: relative;
+
+		&-review {
+			grid-column: 2;
+			grid-row: 2;
+		}
+
+		&-post {
+			align-self: flex-start;
+		}
 
 		&:before {
 			content: '';
@@ -89,6 +96,36 @@
 
 		&--bot {
 			top: 20px;
+		}
+	}
+
+	&__plus {
+		position: relative;
+		width: 12px;
+		height: 12px;
+		display: inline-block;
+		margin-left: 10px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 2px;
+			height: 100%;
+			background: $pink;
+			transform: translateX(-50%);
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background: $pink;
+			transform: translateY(-50%);
 		}
 	}
 }

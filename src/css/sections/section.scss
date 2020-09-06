@@ -28,7 +28,11 @@
 	}
 
 	&--related {
-		margin-bottom: 105px;
+		margin-bottom: 100px;
+	}
+
+	&--possibly {
+		background: $lighterGreen;
 	}
 
 	&__wrap {
@@ -65,6 +69,17 @@
 		&--post {
 			display: flex;
 		}
+
+		&--possibly {
+			padding: 50px 0 70px;
+		}
+
+		&--post-link {
+			display: flex;
+			flex-flow: wrap;
+			margin-right: -40px;
+			margin-bottom: -30px;
+		}
 	}
 
 	&__title {
@@ -90,6 +105,11 @@
 		&--related {
 			text-align: center;
 			margin-bottom: 25px;
+		}
+
+		&--possibly {
+			text-align: center;
+			margin-bottom: 60px;
 		}
 	}
 

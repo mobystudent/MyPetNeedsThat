@@ -1,12 +1,21 @@
 .post {
-	width: 265px;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(116, 116, 116, .15);
-	display: flex;
-	flex-flow: column;
+	&--item {
+		width: 265px;
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgba(116, 116, 116, .15);
+		display: flex;
+		flex-flow: column;
 
-	&:not(:last-child) {
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+
+	&--link {
 		margin-right: 30px;
+		margin-bottom: 30px;
+		width: 25%;
+		max-width: 265px;
 	}
 
 	&__img {
@@ -33,6 +42,10 @@
 		color: $darkerGreen;
 		text-transform: capitalize;
 		margin-bottom: 10px;
+
+		&--link {
+			text-align: center;
+		}
 	}
 
 	&__descrip {

@@ -202,7 +202,7 @@ block content
 							
 								- const { title: postTitle = '', descrip: postDescrip = '', img: postImg = '' } = post[i];
 							
-								article.post
+								article.post.post--item
 									picture.post__img.img
 										img.img__item(src=`img/${postImg}.png` alt=`${postImg}`)
 									.post__content
@@ -212,6 +212,15 @@ block content
 										a.btn.btn--inline.btn--inline-post(href="#") Read More
 											small.btn__plus
 									
+			section.section.section--possibly
+				.container
+					.section__wrap.section__wrap--possibly
+						h2.section__title.section__title--possibly You May Also Like This Posts
+						.section__wrap.section__wrap--post-link
 							
+							- for (let i = 0; i < possibly.length; i++)
+														
+								a.post.post--link
+									h3.post__title.post__title--link=possibly[i]
 
 		include footer.pug

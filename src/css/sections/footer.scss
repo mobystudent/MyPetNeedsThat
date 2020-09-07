@@ -29,12 +29,6 @@
 			margin-bottom: 25px;
 			max-width: 385px;
 		}
-
-		&--single {
-			font: 20px/150% $ProximaNovaSoftBold;
-			color: $dimGreen;
-			margin-bottom: 15px;
-		}
 	}
 
 	&__descrip {
@@ -63,5 +57,15 @@
 
 	&__social {
 		display: flex;
+		align-items: flex-start;
+	}
+
+	&__link {
+		font: 20px/150% $ProximaNovaSoftBold;
+		color: $dimGreen;
+
+		&:hover {
+			color: $darkGreen;
+		}
 	}
 }

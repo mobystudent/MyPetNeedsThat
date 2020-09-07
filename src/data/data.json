@@ -3,17 +3,20 @@
 		{
 			"title": "Best Choice",
 			"descrip": "Pro Pet Works All Natural Oatmeal Dog Shampoo",
-			"img": "shampoo-1"
+			"img": "shampoo-1",
+			"icon": "best-choice"
 		},
 		{
 			"title": "Premium Pick",
 			"descrip": "Douxo Chlorhexidine PS + Climbazole Shampoo",
-			"img": "shampoo-2"
+			"img": "shampoo-2",
+			"icon": "premium"
 		},
 		{
 			"title": "Best Value",
 			"descrip": "Wahl Color Bright Dog Shampoo",
-			"img": "shampoo-3"
+			"img": "shampoo-3",
+			"icon": "best-value"
 		}
 	],
 	"recommend": ["The Best Dog Shampoo", "1. Pro Pet Works All Natural Oatmeal Dog Shampoo and Conditioner", "2. Veterinary Formula Professional Dog Shampoo", "3. Earthbath All Natural Organic Dog Shampoo", "4. Honeydew Colloidal Oatmeal Dog Shampoo", "5. Furminator deShedding Premium Pet Shampoo", "6. Douxo Chlorhexidine PS + Climbazole Pet Shampoo", "7. Bexley Labs Curaseb Shampoo for Dogs", "8. Fieldworks Supply Natural Dog Wash", "9. Wahl Lavender Waterless No Rinse Pet Shampoo", "10. Paws & Pals Natural Dog Shampoo and Conditioner", "11. Nootie Oatmeal Dog Wash with Soothing Aloe", "12. Burt’s Bees Tearless Puppy Shampoo", "13. 4-Legger Certified Organic Dog Shampoo", "14. Wahl Color Bright Dog Shampoo", "Vet’s Best Allergy Itch Relief Dog Shampoo"],

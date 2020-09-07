@@ -9,5 +9,10 @@
 		font: 18px/150% $ProximaNovaSoftBold;
 		color: $darkGreen;
 		text-transform: uppercase;
+		transition: color .25s ease-in-out;
+
+		&:hover {
+			color: $dimGreen;
+		}
 	}
 }

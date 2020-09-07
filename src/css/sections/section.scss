@@ -12,11 +12,11 @@
 	}
 
 	&--review {
-		margin-bottom: 115px;
+		margin-bottom: 110px;
 	}
 
 	&--shampoo {
-		margin-bottom: 100px;
+		margin-bottom: 145px;
 	}
 
 	&--context {
@@ -36,6 +36,21 @@
 	}
 
 	&__wrap {
+		&--page-header {
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: -35px;
+				right: -155px;
+				width: 745px;
+				height: 345px;
+				background: url("../img/page-header-bg.png") no-repeat;
+				background-size: cover;
+			}
+		}
+
 		&--prizes {
 			display: flex;
 			margin-right: -30px;
@@ -61,6 +76,18 @@
 				width: 505px;
 				height: 670px;
 				background: url("../img/dog.png") no-repeat;
+				background-size: cover;
+				z-index: -1;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: -20px;
+				right: -155px;
+				width: 830px;
+				height: 690px;
+				background: url("../img/faq-bg.png") no-repeat;
 				background-size: cover;
 				z-index: -1;
 			}

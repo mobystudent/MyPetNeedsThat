@@ -24,10 +24,12 @@ block content
 					.section__wrap.section__wrap--prizes
 												
 						- for (let i = 0; i < prize.length; i++)
-							- const { title: prizeTitle = '', descrip: prizeDescrip = '', img: prizeImg = '' } = prize[i];
+							- const { title: prizeTitle = '', descrip: prizeDescrip = '', img: prizeImg = '', icon: prizeIcon = '' } = prize[i];
 						
 							.prize
 								.prize__icon
+									svg.icon(class=`icon--${prizeIcon}`)
+										use.icon__item(xlink:href=`#${prizeIcon}`)
 								h3.prize__title=prizeTitle
 								picture.prize__img.img
 									img.img__item(src=`img/${prizeImg}.png` alt=`${prizeImg}`)
@@ -47,6 +49,7 @@ block content
 										span.review__name Dr. Tracy douglas
 									time.time.time--review(datetime="17:06") Published 17:06 pm
 								a.btn.btn--inline.btn--inline-review(href="#") Hide Contects
+									small.btn__plus
 								
 							article.recommend
 								h2.recommend__title Contents
@@ -149,15 +152,15 @@ block content
 					.section__wrap.section__wrap--author
 						article.social.social--author
 							ul.social__list
-								li.social__item
+								li.social__item.social__item--author
 									a.social__link.social__link--author(href="#" target="_blank")
 										svg.icon.icon--social-author
 											use.icon__item(xlink:href="#fb")
-								li.social__item
+								li.social__item.social__item--author
 									a.social__link.social__link--author(href="#" target="_blank")
 										svg.icon.icon--social-author
 											use.icon__item(xlink:href="#insta")
-								li.social__item
+								li.social__item.social__item--author
 									a.social__link.social__link--author(href="#" target="_blank")
 										svg.icon.icon--social-author
 											use.icon__item(xlink:href="#tw")
@@ -185,6 +188,7 @@ block content
 								.faq__item
 									header.faq__header
 										h3.faq__title=faqTitle
+										small.faq__plus
 									.faq__wrap
 										p.faq__text=faqDescrip
 										

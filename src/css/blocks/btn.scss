@@ -20,18 +20,12 @@
 		max-width: 210px;
 		background: $lightPink;
 		border: 1px solid $black;
+		transition: background .25s ease-in-out;
 		border-radius: 10px;
 		margin: 0 auto;
 		text-transform: uppercase;
 		position: relative;
 		display: block;
-
-		&-faq {
-			margin-left: 5px;
-			max-width: 195px;
-			letter-spacing: .07em;
-			padding: 10px 5px;
-		}
 
 		&:before {
 			content: '';
@@ -42,7 +36,28 @@
 			height: 100%;
 			border: 1px solid $black;
 			border-radius: 10px;
+			transition: top .35s ease-in-out, right .35s ease-in-out;
 			z-index: -1;
+		}
+
+		&:hover, &:active {
+			background: $dimGreen;
+
+			&:before {
+				top: 0;
+				right: 0;
+			}
+		}
+
+		&:active {
+			box-shadow: inset 0 0 5px $white;
+		}
+
+		&-faq {
+			margin-left: 5px;
+			max-width: 195px;
+			letter-spacing: .07em;
+			padding: 10px 5px;
 		}
 	}
 
@@ -51,6 +66,33 @@
 		letter-spacing: .03em;
 		color: $pink;
 		position: relative;
+		transition: color .25s ease-in-out;
+
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			height: 12px;
+			width: 100%;
+			background: $dimYellow;
+			transition: height .25s ease-in-out;
+			z-index: -1;
+		}
+
+		&:hover, &:active {
+			color: $darkGreen;
+
+			&:before {
+				height: 150%;
+			}
+
+			.btn__plus {
+				&:before, &:after {
+					background: $darkGreen;
+				}
+			}
+		}
 
 		&-review {
 			grid-column: 2;
@@ -61,15 +103,12 @@
 			align-self: flex-start;
 		}
 
-		&:before {
-			content: '';
-			position: absolute;
-			bottom: -5px;
-			left: 0;
-			height: 12px;
-			width: 100%;
-			background: $dimYellow;
-			z-index: -1;
+		&-active {
+			.btn__plus {
+				&:before {
+					height: 0;
+				}
+			}
 		}
 	}
 
@@ -114,6 +153,7 @@
 			width: 2px;
 			height: 100%;
 			background: $pink;
+			transition: background .25s ease-in-out, height .25s ease-in-out;
 			transform: translateX(-50%);
 		}
 
@@ -125,6 +165,7 @@
 			width: 100%;
 			height: 2px;
 			background: $pink;
+			transition: background .25s ease-in-out;
 			transform: translateY(-50%);
 		}
 	}

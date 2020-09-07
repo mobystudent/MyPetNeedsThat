@@ -7,6 +7,7 @@
 		color: $darkGreen;
 		font: 16px/150% $ProximaNovaSoftBold;
 		opacity: .5;
+		transition: opacity .25s ease-in-out;
 
 		&:not(:last-child) {
 			margin-right: 20px;
@@ -15,13 +16,18 @@
 			&:before {
 				content: '';
 				position: absolute;
-				top: 50px;
-				left: 5px;
-				width: 3px;
-				height: 6px;
+				top: 50%;
+				right: -15px;
+				width: 6px;
+				height: 10px;
+				transform: translateY(-50%);
 				background: url("../img/arrow.svg") no-repeat;
 				background-size: cover;
 			}
+		}
+
+		&:hover, &:active {
+			opacity: 1;
 		}
 	}
 }

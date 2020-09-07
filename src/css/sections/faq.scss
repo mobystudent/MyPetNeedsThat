@@ -42,6 +42,12 @@
 		display: none;
 	}
 
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
 	&__title {
 		font: 20px/150% $ProximaNovaSoftBold;
 		color: $dimGreen;
@@ -50,5 +56,10 @@
 	&__text {
 		font: 16px/150% $ProximaNovaSoftRegular;
 		color: $dimGreen;
+	}
+
+	&__plus {
+		@extend .btn__plus;
+		margin-left: 20px;
 	}
 }

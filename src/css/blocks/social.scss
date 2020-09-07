@@ -2,7 +2,7 @@
 	&--author {
 		display: flex;
 		justify-content: flex-end;
-		margin-bottom: 15px;
+		margin-bottom: 20px;
 	}
 
 	&__title {
@@ -33,5 +33,16 @@
 
 	&__link {
 		display: flex;
+		transition: transform .25s ease-in-out;
+		border-radius: 3px;
+		overflow: hidden;
+
+		&:hover {
+			transform: scale(1.2);
+
+			.icon--social-author {
+				fill: $dimGreen;
+			}
+		}
 	}
 }

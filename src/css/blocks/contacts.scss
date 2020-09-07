@@ -1,0 +1,24 @@
+.contacts {
+	&__title {
+		font: 20px/150% $ProximaNovaSoftBold;
+		color: $dimGreen;
+		margin-bottom: 25px;
+	}
+
+	&__address {
+		font: 20px/140% $ProximaNovaSoftBold;
+		color: $darkGreen;
+		letter-spacing: -.05em;
+		margin-bottom: 25px;
+	}
+
+	&__text {
+		display: block;
+	}
+
+	&__phone {
+		font: 20px/140% $ProximaNovaSoftBold;
+		color: $darkGreen;
+		letter-spacing: -.05em;
+	}
+}

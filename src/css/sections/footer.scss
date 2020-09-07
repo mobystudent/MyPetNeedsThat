@@ -1,3 +1,67 @@
 .footer {
+	background: $pale;
+	padding: 75px 0 25px;
 
+	&__content {
+		display: flex;
+	}
+
+	&__part {
+		&--left {
+			width: 55%;
+			max-width: 625px;
+		}
+
+		&--right {
+			width: 45%;
+			padding-left: 65px;
+		}
+	}
+
+	&__header {
+		margin-bottom: 25px;
+	}
+
+	&__title {
+		&--main {
+			font: 16px/150% $ProximaNovaSoftBold;
+			color: $dimGreen;
+			margin-bottom: 25px;
+			max-width: 385px;
+		}
+
+		&--single {
+			font: 20px/150% $ProximaNovaSoftBold;
+			color: $dimGreen;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__descrip {
+		font: 13px/150% $ProximaNovaSoftBold;
+		color: $darkGreen;
+		padding-right: 30px;
+	}
+
+	&__block {
+		max-width: 295px;
+		padding-right: 55px;
+	}
+
+	&__img {
+		display: block;
+		width: 660px;
+		height: 330px;
+		margin-top: -25px;
+		margin-left: -40px;
+	}
+
+	&__contacts {
+		display: flex;
+		margin-bottom: 50px;
+	}
+
+	&__social {
+		display: flex;
+	}
 }

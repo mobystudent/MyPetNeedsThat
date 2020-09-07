@@ -1,15 +1,37 @@
 .social {
-	display: flex;
-	justify-content: flex-end;
-	margin-bottom: 15px;
+	&--author {
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 15px;
+	}
+
+	&__title {
+		&--footer {
+			font: 20px/150% $ProximaNovaSoftBold;
+			color: $dimGreen;
+			margin-bottom: 15px;
+		}
+	}
 
 	&__list {
 		display: flex;
 	}
 
 	&__item {
-		&:not(:last-child) {
-			margin-right: 20px;
+		&--author {
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
 		}
+
+		&--footer {
+			&:not(:last-child) {
+				margin-right: 23px;
+			}
+		}
+	}
+
+	&__link {
+		display: flex;
 	}
 }

@@ -1,5 +1,13 @@
 .logo {
 	display: inline-block;
-	width: 228px;
-	height: 36px;
+
+	&--header {
+		width: 228px;
+		height: 36px;
+	}
+
+	&--footer {
+		width: 264px;
+		height: 41px;
+	}
 }

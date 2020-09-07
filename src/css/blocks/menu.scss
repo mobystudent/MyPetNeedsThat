@@ -1,0 +1,13 @@
+.menu {
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 7px;
+		}
+	}
+
+	&__link {
+		font: 18px/150% $ProximaNovaSoftBold;
+		color: $darkGreen;
+		text-transform: uppercase;
+	}
+}

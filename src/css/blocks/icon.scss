@@ -6,8 +6,35 @@
 	}
 
 	&--social {
-		width: 20px;
-		height: 20px;
-		fill: $pink;
+		&-author {
+			width: 20px;
+			height: 20px;
+			fill: $pink;
+		}
+
+		&-footer {
+			width: 30px;
+			height: 30px;
+		}
+
+		&-fbookF {
+			fill: $darkBlue;
+		}
+
+		&-twitF {
+			fill: $lightBlue;
+		}
+
+		&-utube {
+			fill: $red;
+		}
+
+		&-instaF {
+			fill: $dimYellow;
+		}
+
+		&-pint {
+			fill: $darkRed;
+		}
 	}
 }

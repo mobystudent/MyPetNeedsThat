@@ -26,7 +26,7 @@ block content
 						- for (let i = 0; i < prize.length; i++)
 							- const { title: prizeTitle = '', descrip: prizeDescrip = '', img: prizeImg = '', icon: prizeIcon = '' } = prize[i];
 						
-							.prize
+							article.prize
 								.prize__icon
 									svg.icon(class=`icon--${prizeIcon}`)
 										use.icon__item(xlink:href=`#${prizeIcon}`)
@@ -34,7 +34,8 @@ block content
 								picture.prize__img.img
 									img.img__item(src=`img/${prizeImg}.png` alt=`${prizeImg}`)
 								p.prize__descrip=prizeDescrip
-								a.bnt.btn--main(href="#") check latest price
+								span.btn.btn--main check latest price
+								a.prize__link(href="#")
 								
 			section.section.section--review
 				.container.container--small
@@ -120,7 +121,7 @@ block content
 											
 												li.action__item=cons[k]
 												
-								a.bnt.btn--main(href="#") check latest price
+								a.btn.btn--main(href="#") check latest price
 								
 			section.section.section--context
 				.container.container--small
@@ -152,18 +153,15 @@ block content
 					.section__wrap.section__wrap--author
 						article.social.social--author
 							ul.social__list
-								li.social__item.social__item--author
-									a.social__link.social__link--author(href="#" target="_blank")
-										svg.icon.icon--social-author
-											use.icon__item(xlink:href="#fb")
-								li.social__item.social__item--author
-									a.social__link.social__link--author(href="#" target="_blank")
-										svg.icon.icon--social-author
-											use.icon__item(xlink:href="#insta")
-								li.social__item.social__item--author
-									a.social__link.social__link--author(href="#" target="_blank")
-										svg.icon.icon--social-author
-											use.icon__item(xlink:href="#tw")
+								
+								- const socialAuthor = ['fbookA', 'instaA', 'twitA'];
+								
+								- for (let i = 0; i < socialAuthor.length; i++)
+								
+									li.social__item.social__item--author
+										a.social__link.social__link--author(href="#" target="_blank")
+											svg.icon.icon--social-author
+												use.icon__item(xlink:href=`#${socialAuthor[i]}`)
 							
 						article.author
 							picture.author__avatar.img
@@ -214,8 +212,9 @@ block content
 										.post__wrap
 											h3.post__title=postTitle
 											p.post__descrip=postDescrip
-										a.btn.btn--inline.btn--inline-post(href="#") Read More
+										span.btn.btn--inline.btn--inline-post(href="#") Read More
 											small.btn__plus
+									a.post__link(href="#")
 									
 			section.section.section--possibly
 				.container.container--large

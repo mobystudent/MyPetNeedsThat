@@ -7,7 +7,6 @@
 	margin-right: 30px;
 	padding: 55px 40px 40px;
 	position: relative;
-	z-index: 0;
 
 	@media screen and (max-width: 1365px) {
 		width: 300px;
@@ -59,5 +58,13 @@
 		@media screen and (max-width: 1365px) {
 			margin-bottom: 50px;
 		}
+	}
+
+	&__link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 }

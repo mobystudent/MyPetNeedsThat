@@ -1,0 +1,44 @@
+.nav {
+	position: absolute;
+	top: 80px;
+	left: -15px;
+	width: 1160px;
+	z-index: 10;
+	display: none;
+
+	&__tab {
+		position: absolute;
+		top: -60px;
+		left: 0;
+		font: 18px $ProximaNovaSoftBold;
+		color: $lightPink;
+		width: 280px;
+		height: 70px;
+		background: $white;
+		box-shadow: 0px 1px 10px rgba(116, 116, 116, .15);
+		border-radius: 5px;
+		text-align: center;
+		padding: 15px 30px 20px;
+		z-index: -1;
+	}
+
+	&__wrap {
+		padding: 30px 30px 115px 110px;
+		display: flex;
+		box-shadow: 0px 1px 10px rgba(116, 116, 116, .15);
+		border-radius: 5px 5px 10px 10px;
+		background: $white;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: -10px;
+			left: 0;
+			width: 280px;
+			height: 20px;
+			background: $white;
+			z-index: 1;
+		}
+	}
+}

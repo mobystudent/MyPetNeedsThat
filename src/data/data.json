@@ -1,4 +1,31 @@
 {
+	"menu": [
+		{
+			"title": "dogs",
+			"pages": ["Dogs Equipment", "Dogs Food", "Dogs Health", "Dogs Training", "Dogs Breeds", "Puppies"],
+			"icon": "dog"
+		},
+		{
+			"title": "cats",
+			"pages": ["Cats Equipment", "Cats Food", "Cats Health", "Cats Training", "Cats Breeds", "kitties"],
+			"icon": "cat"
+		},
+		{
+			"title": "fish",
+			"pages": ["Food Treatment", "Aquariums"],
+			"icon": "fish"
+		},
+		{
+			"title": "birds",
+			"pages": ["Food", "Accessories", "Care"],
+			"icon": "parrot"
+		},
+		{
+			"title": "small animals",
+			"pages": ["Hamsters", "Gerbils", "Rabbits", "Rats", "Guinea Pigs"],
+			"icon": "rat"
+		}
+	],
 	"prize": [
 		{
 			"title": "Best Choice",
@@ -102,5 +129,5 @@
 		}
 	],
 	"possibly": ["10 Tips for Taking a Road Trip With Your Dog", "Cat Litter", "How Many Teeth Do Adoult dogs Have?", "Cat Litter", "10 Tips for Taking a Road Trip With Your Dog", "Pitbul Mastiff Mix: Facts & Temperament", "How Many Teeth Do Adoult dogs Have?", "The Best Cat Litter (Rewiew) in 2020"],
-	"menuPage": ["about us", "sitemap", "provacy policy", "disclosure", "medical", "disclaimer", "contact us"]
+	"menuFooter": ["about us", "sitemap", "provacy policy", "disclosure", "medical", "disclaimer", "contact us"]
 }

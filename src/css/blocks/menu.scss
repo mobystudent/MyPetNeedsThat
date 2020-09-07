@@ -1,18 +1,109 @@
 .menu {
-	&__item {
+	&--header {
 		&:not(:last-child) {
-			margin-bottom: 7px;
+			margin-right: 80px;
+		}
+
+		&-active {
+			.menu__title {
+				opacity: 1;
+
+				&:before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__title {
+		font: 22px $ProximaNovaSoftBold;
+		letter-spacing: .02em;
+		color: $lightPink;
+		text-transform: uppercase;
+		opacity: .6;
+		margin-bottom: 15px;
+		padding-left: 30px;
+		position: relative;
+		transition: opacity .25s ease-in-out;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 20px;
+			height: 20px;
+			opacity: .6;
+			transform: translateY(-50%);
+			transition: opacity .25s ease-in-out;
+		}
+
+		&--dog {
+			&:before {
+				background: url("../img/dog.svg") no-repeat;
+				background-size: cover;
+			}
+		}
+
+		&--cat {
+			&:before {
+				background: url("../img/cat.svg") no-repeat;
+				background-size: cover;
+			}
+		}
+
+		&--fish {
+			&:before {
+				background: url("../img/fish.svg") no-repeat;
+				background-size: cover;
+			}
+		}
+
+		&--parrot {
+			&:before {
+				background: url("../img/parrot.svg") no-repeat;
+				background-size: cover;
+			}
+		}
+
+		&--rat {
+			&:before {
+				background: url("../img/rat.svg") no-repeat;
+				background-size: cover;
+			}
+		}
+	}
+
+	&__item {
+		&--header {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+
+		&--footer {
+			&:not(:last-child) {
+				margin-bottom: 7px;
+			}
 		}
 	}
 
 	&__link {
-		font: 18px/150% $ProximaNovaSoftBold;
-		color: $darkGreen;
-		text-transform: uppercase;
 		transition: color .25s ease-in-out;
+		color: $darkGreen;
 
-		&:hover {
+		&:hover, &:active {
 			color: $dimGreen;
+		}
+
+		&--header {
+			font: 16px $ProximaNovaSoftBold;
+			text-transform: capitalize;
+		}
+
+		&--footer {
+			font: 18px/150% $ProximaNovaSoftBold;
+			text-transform: uppercase;
 		}
 	}
 }

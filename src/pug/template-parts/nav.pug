@@ -1,0 +1,16 @@
+nav.nav
+	.nav__tab All Categories
+	.nav__wrap
+		
+		- for (let i = 0; i < menu.length; i++)
+		
+			- const { title: titleMenu = '', pages: menuPages = [], icon: menuIcon = '' } = menu[i];
+			
+			article.menu.menu--header
+				h3.menu__title(class=`menu__title--${menuIcon}`)=titleMenu
+				ul.menu__list
+			
+					- for (let j = 0; j < menuPages.length; j++)
+			
+						li.menu__item.menu__item--header
+							a.menu__link.menu__link--header(href="#")=menuPages[j]

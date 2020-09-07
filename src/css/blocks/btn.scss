@@ -4,6 +4,27 @@
 	&--burger {
 		width: 25px;
 		height: 23px;
+		z-index: 15;
+
+		&-active {
+			.btn__line {
+				&--top {
+					width: 28px;
+					transform: rotate(45deg);
+					transform-origin: left;
+				}
+
+				&--mid {
+					opacity: 0;
+				}
+
+				&--bot {
+					width: 28px;
+					transform: rotate(-45deg);
+					transform-origin: left;
+				}
+			}
+		}
 	}
 
 	&--search {

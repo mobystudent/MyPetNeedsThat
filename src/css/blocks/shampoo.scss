@@ -1,10 +1,18 @@
 .shampoo {
 	&:not(:last-child) {
 		margin-bottom: 150px;
+
+		@media screen and (max-width: 1365px) {
+			margin-bottom: 120px;
+		}
 	}
 
 	&--left {
 		margin-left: -35px;
+
+		@media screen and (max-width: 1365px) {
+			margin-left: 0;
+		}
 
 		.shampoo__wrap-img {
 			margin-right: 30px;
@@ -13,6 +21,10 @@
 
 	&--right {
 		margin-right: -35px;
+
+		@media screen and (max-width: 1365px) {
+			margin-right: 0;
+		}
 
 		.shampoo__content {
 			order: 1;
@@ -38,6 +50,11 @@
 		border: 40px solid $lightWhiteGreen;
 		background: $white;
 
+		@media screen and (max-width: 1365px) {
+			width: 440px;
+			height: 440px;
+		}
+
 		&:before {
 			content: '';
 			position: absolute;
@@ -49,6 +66,11 @@
 			background: url("../img/shampoo-bg.png") no-repeat;
 			background-size: cover;
 			z-index: -1;
+
+			@media screen and (max-width: 1365px) {
+				width: 380px;
+				height: 540px;
+			}
 		}
 	}
 

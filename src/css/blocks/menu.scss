@@ -2,6 +2,10 @@
 	&--header {
 		&:not(:last-child) {
 			margin-right: 80px;
+
+			@media screen and (max-width: 1365px) {
+				margin-right: 55px;
+			}
 		}
 
 		&-active {

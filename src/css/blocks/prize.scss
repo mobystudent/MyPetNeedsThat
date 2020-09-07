@@ -9,6 +9,12 @@
 	position: relative;
 	z-index: 0;
 
+	@media screen and (max-width: 1365px) {
+		width: 300px;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
 	&__icon {
 		display: flex;
 		justify-content: center;
@@ -49,5 +55,9 @@
 		color: $darkGreen;
 		text-align: center;
 		margin-bottom: 70px;
+
+		@media screen and (max-width: 1365px) {
+			margin-bottom: 50px;
+		}
 	}
 }

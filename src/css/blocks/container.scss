@@ -1,7 +1,14 @@
 .container {
-	width: 1200px;
 	padding: 0 30px;
 	margin: 0 auto;
+
+	&--large {
+		width: 1200px;
+
+		@media screen and (max-width: 1365px) {
+			width: 1024px;
+		}
+	}
 
 	&--small {
 		width: 815px;

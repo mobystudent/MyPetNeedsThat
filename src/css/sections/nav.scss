@@ -6,6 +6,10 @@
 	z-index: 10;
 	display: none;
 
+	@media screen and (max-width: 1365px) {
+		width: 100%;
+	}
+
 	&__tab {
 		position: absolute;
 		top: -60px;
@@ -29,6 +33,10 @@
 		border-radius: 5px 5px 10px 10px;
 		background: $white;
 		position: relative;
+
+		@media screen and (max-width: 1365px) {
+			padding: 30px 40px 85px;
+		}
 
 		&:before {
 			content: '';

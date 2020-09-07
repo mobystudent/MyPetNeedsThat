@@ -10,7 +10,7 @@ block content
 
 		main.main
 			section.section.section--page-header
-				.container
+				.container.container--large
 					.section__wrap.section__wrap--page-header
 						article.breadcrums
 							a.breadcrums__link(href="#") Home
@@ -20,7 +20,7 @@ block content
 						time.time.time--page(datetime="2020-04-10") Last Update: 10 Apr 2020
 						
 			section.section.section--prizes
-				.container
+				.container.container--large
 					.section__wrap.section__wrap--prizes
 												
 						- for (let i = 0; i < prize.length; i++)
@@ -63,7 +63,7 @@ block content
 								p Dog shampoos are important #[span.highlight canine care products] that are geared primarily for the maintenance of their hygiene. Some products actually come with different formulations to help in the control and management of pests like fleas and ticks. However useful, some canine shampoos contain harsh ingredients that may pose a threat to your #[span.highlight pet’s health]. It is therefore, important for you to learn how to choose the correct hair care product for your pet. We have researched the market for the best dog shampoo to help you get started.
 								
 			section.section.section--shampoo
-				.container
+				.container.container--large
 					.section__wrap.section__wrap--shampoo
 						h2.section__title.section__title--shampoo  The Best Dog Shampoos
 						
@@ -175,27 +175,28 @@ block content
 								p.author__descrip General Practice Veterinarian, currently working at the Glenwood Veterinary Clinic, Glenwood Springs, Colorado. #[br]Dr. Douglas began her veterinary career as a Veterinary Nurse in Highton Veterinary Clinic, Highton Victoria, and then as an Emergency Veterinarian in Uintah Pet Emergency, Colorado Springs, Colorado. Tracy is particularly interested in surgery, neurology and internal medicine, which gives her a well-rounded knowledge on animal health and well-being. She received her Doctorate of Veterinary Medicine from the University of Melbourne, while her undergraduate bachelor of science is from the United States Military Academy at West Point, New York.
 								
 			section.section.section--faq.faq
-				.container
+				.container.container--large
 					.section__wrap.section__wrap--faq
 						h2.section__title.section__title--faq Frequelntly Asked Questions
 						p.section__subtitle.section__subtitle--faq We have selected the most popular questiond of our users. Take a look, maybe it will be interesting for you too.
 						.faq__content
+							.faq__list
 							
-							- for (let i = 0; i < faq.length; i++)
-							
-								- const { title: faqTitle = '', descrip: faqDescrip = '' } = faq[i];
-							
-								.faq__item
-									header.faq__header
-										h3.faq__title=faqTitle
-										small.faq__plus
-									.faq__wrap
-										p.faq__text=faqDescrip
+								- for (let i = 0; i < faq.length; i++)
+								
+									- const { title: faqTitle = '', descrip: faqDescrip = '' } = faq[i];
+								
+									.faq__item
+										header.faq__header
+											h3.faq__title=faqTitle
+											small.faq__plus
+										.faq__wrap
+											p.faq__text=faqDescrip
 										
 						a.btn.btn--main.btn--main-faq(href="#") show more
 						
 			section.section.section--related
-				.container
+				.container.container--large
 					.section__wrap.section__wrap--related
 						h2.section__title.section__title--related Related Posts
 						p.section__subtitle.section__subtitle--related We have selected the top related posts for our users. Take a look, maybe it will be interesting for you too.
@@ -217,7 +218,7 @@ block content
 											small.btn__plus
 									
 			section.section.section--possibly
-				.container
+				.container.container--large
 					.section__wrap.section__wrap--possibly
 						h2.section__title.section__title--possibly You May Also Like This Posts
 						.section__wrap.section__wrap--post-link

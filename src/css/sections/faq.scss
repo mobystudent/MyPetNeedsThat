@@ -23,6 +23,17 @@
 		max-height: 730px;
 		margin-left: -25px;
 		margin-bottom: 55px;
+
+		@media screen and (max-width: 1365px) {
+			width: 670px;
+			margin-left: 0;
+			padding-right: 60px;
+		}
+	}
+
+	&__list {
+		overflow: hidden;
+		max-height: 320px;
 	}
 
 	&__item {

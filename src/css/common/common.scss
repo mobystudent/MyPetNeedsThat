@@ -29,6 +29,12 @@ body {
 		background: url("../img/main-bg.png") no-repeat;
 		background-size: contain;
 		z-index: -1;
+
+		@media screen and (max-width: 1365px) {
+			top: 15%;
+			width: 1400px;
+			margin: 0 -30px;
+		}
 	}
 }
 

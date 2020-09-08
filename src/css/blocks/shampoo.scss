@@ -9,6 +9,10 @@
 		@media screen and (max-width: 1023px) {
 			margin-bottom: 80px;
 		}
+
+		@media screen and (max-width: 767px) {
+			margin-bottom: 45px;
+		}
 	}
 
 	&--left {
@@ -23,6 +27,10 @@
 
 			@media screen and (max-width: 1023px) {
 				margin: 0 auto 50px;
+			}
+
+			@media screen and (max-width: 767px) {
+				margin-bottom: 30px;
 			}
 		}
 	}
@@ -50,6 +58,10 @@
 				margin: 0 auto 50px;
 				grid-column: 1;
 			}
+
+			@media screen and (max-width: 767px) {
+				margin-bottom: 30px;
+			}
 		}
 
 		.shampoo__title, .shampoo__descrip, .shampoo__blocks {
@@ -69,6 +81,10 @@
 		@media screen and (max-width: 1023px) {
 			grid-template-columns: 1fr;
 			margin-bottom: 45px;
+		}
+
+		@media screen and (max-width: 767px) {
+			margin-bottom: 30px;
 		}
 	}
 
@@ -94,6 +110,12 @@
 			grid-row: 2/3;
 		}
 
+		@media screen and (max-width: 767px) {
+			width: 345px;
+			height: 345px;
+			border-width: 30px;
+		}
+
 		&:before {
 			content: '';
 			position: absolute;
@@ -114,6 +136,12 @@
 			@media screen and (max-width: 1023px) {
 				width: 320px;
 				height: 450px;
+			}
+
+			@media screen and (max-width: 767px) {
+				width: 284px;
+				height: 400px;
+				transform: translate(-48%, -53%) rotate(-14deg);
 			}
 		}
 	}
@@ -147,11 +175,22 @@
 				margin-bottom: 50px;
 				padding: 0 30px;
 			}
+
+			@media screen and (max-width: 767px) {
+				font-size: 20px;
+				line-height: 125%;
+				padding: 0 20px;
+				margin-bottom: 25px;
+			}
 		}
 
 		&--block {
 			font: 20px/120% $ProximaNovaSoftBold;
 			margin-bottom: 15px;
+
+			@media screen and (max-width: 767px) {
+				font-size: 18px;
+			}
 		}
 	}
 
@@ -166,6 +205,12 @@
 			grid-column: 1;
 			grid-row: 3/4;
 		}
+
+		@media screen and (max-width: 767px) {
+			font-size: 17px;
+			line-height: 125%;
+			margin-bottom: 35px;
+		}
 	}
 
 	&__blocks {
@@ -176,6 +221,10 @@
 			grid-column: 1;
 			grid-row: 4/5;
 		}
+
+		@media screen and (max-width: 767px) {
+			flex-flow: column;
+		}
 	}
 
 	&__block {
@@ -184,6 +233,13 @@
 			width: 55%;
 			max-width: 370px;
 			flex: 0 0 auto;
+
+			@media screen and (max-width: 767px) {
+				width: 100%;
+				max-width: 100%;
+				margin-right: 0;
+				margin-bottom: 25px;
+			}
 		}
 	}
 
@@ -194,8 +250,16 @@
 			text-indent: 10px;
 			position: relative;
 
+			@media screen and (max-width: 767px) {
+				font-size: 17px;
+			}
+
 			&:not(:last-child) {
 				margin-bottom: 2px;
+
+				@media screen and (max-width: 767px) {
+					margin-bottom: 0;
+				}
 			}
 
 			&:before {
@@ -215,6 +279,10 @@
 
 			&:not(:last-child) {
 				margin-bottom: 25px;
+
+				@media screen and (max-width: 767px) {
+					margin-bottom: 10px;
+				}
 			}
 		}
 	}
@@ -223,6 +291,10 @@
 		font: 18px/125% $ProximaNovaSoftBold;
 		display: inline-block;
 		padding-right: 10px;
+
+		@media screen and (max-width: 767px) {
+			font-size: 17px;
+		}
 	}
 
 	&__value {

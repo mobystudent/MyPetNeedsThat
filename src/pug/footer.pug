@@ -7,8 +7,6 @@ footer.footer
 			.footer__part.footer__part--left
 				h4.footer__title.footer__title--main The World’s Best Product Reviews, Aquipments and Advice For Your Pets
 				p.footer__descrip MyPetsNeedThat.com is a participant in Amazon Services LLC Associates Program, an affiliate advertising program designed to provide means for sites to earn advertising and linking to amazon.com
-				picture.footer__img.img
-					img.img__item(src="img/dogs.png" alt="dogs")
 			.footer__part.footer__part--right
 				.footer__contacts
 					article.contacts.footer__block.footer__block--left
@@ -18,15 +16,22 @@ footer.footer
 							span.contacts__text G-6191, Indian Trail, NC 28079, USA 
 						a.contacts__phone(href="tel:+16692238682") +1 669-223-8682
 					article.menu.menu--footer
-						ul.menu__list.menu__list--footer
+						ul.menu__list.menu__list--footer.menu__list--footer-top
 							
-							- for (let i = 0; i < menuFooter.length; i++)
+							- for (let i = 0; i < 3; i++)
+							
+								li.menu__item.menu__item--footer
+									a.menu__link.menu__link--footer(href="#")=menuFooter[i]
+									
+						ul.menu__list.menu__list--footer.menu__list--footer-bot
+							
+							- for (let i = 3; i < menuFooter.length; i++)
 							
 								li.menu__item.menu__item--footer
 									a.menu__link.menu__link--footer(href="#")=menuFooter[i]
 								
 				.footer__social
-					article.social.footer__block.footer__block--left
+					article.social.social--footer.footer__block.footer__block--left
 						h3.social__title.social__title--footer Follow #MyPetsNessThat
 						ul.social__list
 							

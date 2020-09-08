@@ -9,12 +9,22 @@
 			font-size: 32px;
 			margin-bottom: 20px;
 		}
+
+		@media screen and (max-width: 767px) {
+			font-size: 24px;
+			margin-bottom: 25px;
+		}
 	}
 
 	p {
 		font: 18px/130% $ProximaNovaSoftRegular;
 		color: $darkGreen;
 		margin-bottom: 25px;
+
+		@media screen and (max-width: 767px) {
+			font-size: 17px;
+			line-height: 125%;
+		}
 	}
 
 	a {
@@ -23,6 +33,11 @@
 		color: $pink;
 		margin-bottom: 35px;
 		position: relative;
+
+		@media screen and (max-width: 767px) {
+			font-size: 17px;
+			margin-bottom: 25px;
+		}
 
 		&:before {
 			content: '';
@@ -45,6 +60,11 @@
 		min-height: 300px;
 		margin-bottom: 35px;
 		background: $black;
+
+		@media screen and (max-width: 767px) {
+			min-height: 150px;
+			margin-bottom: 30px;
+		}
 	}
 
 	.highlight {

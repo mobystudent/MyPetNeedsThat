@@ -9,6 +9,11 @@
 		@media screen and (max-width: 1023px) {
 			padding-top: 25px;
 		}
+
+		@media screen and (max-width: 767px) {
+			padding-top: 5px;
+			margin-bottom: 70px;
+		}
 	}
 
 	&--prizes {
@@ -16,6 +21,10 @@
 
 		@media screen and (max-width: 1023px) {
 			margin-bottom: 40px;
+		}
+
+		@media screen and (max-width: 767px) {
+			margin-bottom: 25px;
 		}
 	}
 
@@ -25,6 +34,10 @@
 		@media screen and (max-width: 1023px) {
 			margin-bottom: 75px;
 		}
+
+		@media screen and (max-width: 767px) {
+			margin-bottom: 50px;
+		}
 	}
 
 	&--shampoo {
@@ -32,6 +45,10 @@
 
 		@media screen and (max-width: 1023px) {
 			margin-bottom: 90px;
+		}
+
+		@media screen and (max-width: 767px) {
+			margin-bottom: 60px;
 		}
 	}
 
@@ -41,13 +58,17 @@
 		@media screen and (max-width: 1023px) {
 			margin-bottom: 120px;
 		}
+
+		@media screen and (max-width: 767px) {
+			margin-bottom: 70px;
+		}
 	}
 
 	&--faq {
 		margin-bottom: 185px;
 
 		@media screen and (max-width: 1023px) {
-			margin-bottom: 100px;
+			margin-bottom: 110px;
 		}
 	}
 
@@ -56,6 +77,10 @@
 
 		@media screen and (max-width: 1023px) {
 			margin-bottom: 70px;
+		}
+
+		@media screen and (max-width: 767px) {
+			margin-bottom: 100px;
 		}
 	}
 
@@ -86,12 +111,23 @@
 					width: 600px;
 					height: 255px;
 				}
+
+				@media screen and (max-width: 767px) {
+					right: -70%;
+					top: 40%;
+					width: 470px;
+					height: 200px;
+				}
 			}
 		}
 
 		&--prizes {
 			display: flex;
 			margin-right: -30px;
+
+			@media screen and (max-width: 1023px) {
+				margin-right: 0;
+			}
 		}
 
 		&--context {
@@ -126,6 +162,10 @@
 					right: 50%;
 					transform: translateX(50%);
 				}
+
+				@media screen and (max-width: 767px) {
+					top: 92%;
+				}
 			}
 
 			&:after {
@@ -150,6 +190,10 @@
 				align-items: flex-start;
 				padding: 0 30px;
 			}
+
+			@media screen and (max-width: 767px) {
+				padding: 0;
+			}
 		}
 
 		&--possibly {
@@ -157,6 +201,10 @@
 
 			@media screen and (max-width: 1023px) {
 				padding-bottom: 50px;
+			}
+
+			@media screen and (max-width: 767px) {
+				padding: 40px 0 35px;
 			}
 		}
 
@@ -176,6 +224,10 @@
 				padding: 0 30px;
 				margin-right: 0;
 			}
+
+			@media screen and (max-width: 767px) {
+				padding: 0;
+			}
 		}
 	}
 
@@ -188,6 +240,11 @@
 			font-size: 32px;
 		}
 
+		@media screen and (max-width: 767px) {
+			letter-spacing: -.03em;
+			font-size: 24px;
+		}
+
 		&--main {
 			font-size: 50px;
 			margin-bottom: 15px;
@@ -196,6 +253,13 @@
 			@media screen and (max-width: 1023px) {
 				font-size: 44px;
 				max-width: 500px;
+			}
+
+			@media screen and (max-width: 767px) {
+				margin-bottom: 75px;
+				font-size: 40px;
+				letter-spacing: 0;
+				padding-right: 30px;
 			}
 		}
 
@@ -212,6 +276,10 @@
 				margin-bottom: 30px;
 				text-align: center;
 			}
+
+			@media screen and (max-width: 767px) {
+				margin-bottom: 20px;
+			}
 		}
 
 		&--faq {
@@ -221,11 +289,20 @@
 				margin-bottom: 20px;
 				text-align: center;
 			}
+
+			@media screen and (max-width: 767px) {
+				padding: 0 30px;
+				margin-bottom: 15px;
+			}
 		}
 
 		&--related {
 			text-align: center;
 			margin-bottom: 25px;
+
+			@media screen and (max-width: 767px) {
+				margin-bottom: 30px;
+			}
 		}
 
 		&--possibly {
@@ -234,6 +311,12 @@
 
 			@media screen and (max-width: 1023px) {
 				margin-bottom: 40px;
+			}
+
+			@media screen and (max-width: 767px) {
+				padding: 0 15px;
+				max-width: 250px;
+				margin: 0 auto 35px;
 			}
 		}
 	}
@@ -250,6 +333,10 @@
 				text-align: center;
 				margin: 0 auto 25px;
 			}
+
+			@media screen and (max-width: 767px) {
+				margin-bottom: 30px;
+			}
 		}
 
 		&--related {
@@ -259,6 +346,10 @@
 
 			@media screen and (max-width: 1023px) {
 				margin-bottom: 30px;
+			}
+
+			@media screen and (max-width: 767px) {
+				margin-bottom: 20px;
 			}
 		}
 	}

@@ -10,6 +10,13 @@
 		width: 100%;
 	}
 
+	@media screen and (max-width: 767px) {
+		top: 65px;
+		width: calc(100% + 30px);
+		height: calc(100vh - 55px);
+		overflow: scroll;
+	}
+
 	&__tab {
 		position: absolute;
 		top: -60px;
@@ -24,6 +31,10 @@
 		text-align: center;
 		padding: 15px 30px 20px;
 		z-index: -1;
+
+		@media screen and (max-width: 767px) {
+			display: none;
+		}
 	}
 
 	&__wrap {
@@ -43,6 +54,11 @@
 			padding-bottom: 50px;
 		}
 
+		@media screen and (max-width: 767px) {
+			border-radius: 0;
+			box-shadow: none;
+		}
+
 		&:before {
 			content: '';
 			position: absolute;
@@ -52,6 +68,10 @@
 			height: 20px;
 			background: $white;
 			z-index: 1;
+
+			@media screen and (max-width: 767px) {
+				display: none;
+			}
 		}
 	}
 }

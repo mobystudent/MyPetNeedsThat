@@ -10,6 +10,11 @@
 	&--best-choice {
 		width: 75px;
 		height: 95px;
+
+		@media screen and (max-width: 767px) {
+			width: 80px;
+			height: 85px;
+		}
 	}
 
 	&--premium {
@@ -32,6 +37,11 @@
 			width: 20px;
 			height: 20px;
 			fill: $pink;
+
+			@media screen and (max-width: 767px) {
+				width: 24px;
+				height: 24px;
+			}
 		}
 
 		&-footer {

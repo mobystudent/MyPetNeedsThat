@@ -10,6 +10,10 @@ body {
 	display: flex;
 	flex-flow: column;
 	min-height: 100vh;
+
+	&--hidden {
+		overflow: hidden;
+	}
 }
 
 .main {

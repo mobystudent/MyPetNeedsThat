@@ -4,7 +4,11 @@
 	margin-bottom: 55px;
 
 	@media screen and (max-width: 1023px) {
-		margin-bottom: 40px;
+		margin-bottom: 35px;
+	}
+
+	@media screen and (max-width: 767px) {
+		flex-flow: column;
 	}
 
 	&__block {
@@ -14,17 +18,30 @@
 		border-radius: 10px;
 		overflow: hidden;
 
+		@media screen and (max-width: 767px) {
+			width: 100%;
+		}
+
 		&:first-child {
 			margin-right: 30px;
+
+			@media screen and (max-width: 767px) {
+				margin-right: 0;
+				margin-bottom: 15px;
+			}
 		}
 	}
 
 	&__title {
-		font: 20px/150% $ProximaNovaSoftBold;
+		font: 20px $ProximaNovaSoftBold;
 		text-align: center;
 		color: $darkGreen;
-		padding: 7px 40px;
+		padding: 10px 40px;
 		text-transform: capitalize;
+
+		@media screen and (max-width: 767px) {
+			font-size: 18px;
+		}
 
 		&--pros {
 			background: $turquoise;
@@ -37,6 +54,11 @@
 
 	&__list {
 		padding: 20px 20px 30px;
+
+		@media screen and (max-width: 767px) {
+			padding-top: 10px;
+			padding-bottom: 20px;
+		}
 	}
 
 	&__item {
@@ -45,6 +67,12 @@
 		text-indent: 10px;
 		position: relative;
 		max-width: 300px;
+
+		@media screen and (max-width: 767px) {
+			font-size: 16px;
+			line-height: 100%;
+			max-width: 100%;
+		}
 
 		&:before {
 			content: '';
@@ -55,10 +83,19 @@
 			height: 4px;
 			border-radius: 50%;
 			background: $darkGreen;
+
+			@media screen and (max-width: 767px) {
+				width: 3px;
+				height: 3px;
+			}
 		}
 
 		&:not(:last-child) {
 			margin-bottom: 25px;
+
+			@media screen and (max-width: 767px) {
+				margin-bottom: 15px;
+			}
 		}
 	}
 }

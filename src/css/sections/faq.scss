@@ -6,6 +6,10 @@
 		overflow: hidden;
 	}
 
+	@media screen and (max-width: 767px) {
+		padding: 90px 0 400px;
+	}
+
 	&:before {
 		content: '';
 		position: absolute;
@@ -20,6 +24,11 @@
 		@media screen and (max-width: 1023px) {
 			height: 95%;
 			top: 30px;
+		}
+
+		@media screen and (max-width: 767px) {
+			top: 35px;
+			transform: skewY(9deg);
 		}
 	}
 
@@ -37,6 +46,12 @@
 
 		@media screen and (max-width: 1023px) {
 			display: block;
+		}
+
+		@media screen and (max-width: 767px) {
+			bottom: -35px;
+			height: 70px;
+			transform: skewY(9deg);
 		}
 	}
 
@@ -60,11 +75,21 @@
 		@media screen and (max-width: 1023px) {
 			margin: 0 auto 40px;
 		}
+
+		@media screen and (max-width: 767px) {
+			width: 100%;
+			padding-right: 45px;
+			margin-bottom: 55px;
+		}
 	}
 
 	&__list {
 		overflow: hidden;
 		max-height: 320px;
+
+		@media screen and (max-width: 767px) {
+			max-height: 470px;
+		}
 	}
 
 	&__item {
@@ -82,17 +107,26 @@
 		padding-bottom: 5px;
 		padding-right: 40px;
 		display: none;
+
+		@media screen and (max-width: 767px) {
+			margin-top: 15px;
+			padding-bottom: 0;
+		}
 	}
 
 	&__header {
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
 	}
 
 	&__title {
 		font: 20px/150% $ProximaNovaSoftBold;
 		color: $dimGreen;
+
+		@media screen and (max-width: 767px) {
+			font-size: 18px;
+			line-height: 125%;
+		}
 	}
 
 	&__text {
@@ -103,5 +137,6 @@
 	&__plus {
 		@extend .btn__plus;
 		margin-left: 20px;
+		margin-top: 5px;
 	}
 }

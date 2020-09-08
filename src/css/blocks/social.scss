@@ -3,6 +3,17 @@
 		display: flex;
 		justify-content: flex-end;
 		margin-bottom: 20px;
+
+		@media screen and (max-width: 767px) {
+			margin-top: -55px;
+			margin-bottom: 50px;
+		}
+	}
+
+	&--footer {
+		@media screen and (max-width: 767px) {
+			order: 2;
+		}
 	}
 
 	&__title {
@@ -10,11 +21,23 @@
 			font: 20px/150% $ProximaNovaSoftBold;
 			color: $dimGreen;
 			margin-bottom: 15px;
+
+			@media screen and (max-width: 767px) {
+				display: flex;
+				flex-flow: column;
+				font-size: 17px;
+				line-height: 125%;
+				text-align: center;
+			}
 		}
 	}
 
 	&__list {
 		display: flex;
+
+		@media screen and (max-width: 767px) {
+			justify-content: center;
+		}
 	}
 
 	&__item {

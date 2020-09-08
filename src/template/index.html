@@ -86,7 +86,7 @@
               <div class="nav__tab">All Categories</div>
               <div class="nav__wrap">
                 <article class="menu menu--header">
-                  <h3 class="menu__title menu__title--dog">dogs</h3>
+                  <h3 class="menu__title"><span class="menu__text menu__text--dog">dogs</span></h3>
                   <ul class="menu__list menu__list--header">
                     <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Dogs Equipment</a></li>
                     <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Dogs Food</a></li>
@@ -97,7 +97,7 @@
                   </ul>
                 </article>
                 <article class="menu menu--header">
-                  <h3 class="menu__title menu__title--cat">cats</h3>
+                  <h3 class="menu__title"><span class="menu__text menu__text--cat">cats</span></h3>
                   <ul class="menu__list menu__list--header">
                     <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Cats Equipment</a></li>
                     <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Cats Food</a></li>
@@ -108,14 +108,14 @@
                   </ul>
                 </article>
                 <article class="menu menu--header">
-                  <h3 class="menu__title menu__title--fish">fish</h3>
+                  <h3 class="menu__title"><span class="menu__text menu__text--fish">fish</span></h3>
                   <ul class="menu__list menu__list--header">
                     <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Food Treatment</a></li>
                     <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Aquariums</a></li>
                   </ul>
                 </article>
                 <article class="menu menu--header">
-                  <h3 class="menu__title menu__title--parrot">birds</h3>
+                  <h3 class="menu__title"><span class="menu__text menu__text--parrot">birds</span></h3>
                   <ul class="menu__list menu__list--header">
                     <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Food</a></li>
                     <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Accessories</a></li>
@@ -123,7 +123,7 @@
                   </ul>
                 </article>
                 <article class="menu menu--header">
-                  <h3 class="menu__title menu__title--rat">small animals</h3>
+                  <h3 class="menu__title"><span class="menu__text menu__text--rat">small animals</span></h3>
                   <ul class="menu__list menu__list--header">
                     <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Hamsters</a></li>
                     <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Gerbils</a></li>
@@ -412,10 +412,10 @@
               </article>
               <article class="author">
                 <picture class="author__avatar img"><img class="img__item" src="img/avatar.png" alt="avatar"></picture>
+                <header class="author__header"><span class="author__name">dr. Tracy Douglas</span><span class="author__position">General Veterinarian</span></header>
                 <div class="author__content">
-                  <header class="author__header"><span class="author__name">dr. Tracy Douglas</span><span class="author__position">General Veterinarian</span></header>
                   <p class="author__descrip">General Practice Veterinarian, currently working at the Glenwood Veterinary Clinic, Glenwood Springs, Colorado. <br>Dr. Douglas began her veterinary career as a Veterinary Nurse in Highton Veterinary Clinic, Highton Victoria, and then as an Emergency Veterinarian in Uintah Pet Emergency, Colorado Springs, Colorado. Tracy is particularly interested in surgery, neurology and internal medicine, which gives her a well-rounded knowledge on animal health and well-being. She received her Doctorate of Veterinary Medicine from the University of Melbourne, while her undergraduate bachelor of science is from the United States Military Academy at West Point, New York.</p>
-                </div>
+                </div><span class="btn btn--inline btn--inline-author" href="#">Read More<small class="btn__plus"></small></span>
               </article>
             </div>
           </div>
@@ -535,7 +535,6 @@
             <div class="footer__part footer__part--left">
               <h4 class="footer__title footer__title--main">The World’s Best Product Reviews, Aquipments and Advice For Your Pets</h4>
               <p class="footer__descrip">MyPetsNeedThat.com is a participant in Amazon Services LLC Associates Program, an affiliate advertising program designed to provide means for sites to earn advertising and linking to amazon.com</p>
-              <picture class="footer__img img"><img class="img__item" src="img/dogs.png" alt="dogs"></picture>
             </div>
             <div class="footer__part footer__part--right">
               <div class="footer__contacts">
@@ -544,10 +543,12 @@
                   <address class="contacts__address"><span class="contacts__text">7000 Stinson Hartis Road, Suit</span><span class="contacts__text">G-6191, Indian Trail, NC 28079, USA </span></address><a class="contacts__phone" href="tel:+16692238682">+1 669-223-8682</a>
                 </article>
                 <article class="menu menu--footer">
-                  <ul class="menu__list menu__list--footer">
+                  <ul class="menu__list menu__list--footer menu__list--footer-top">
                     <li class="menu__item menu__item--footer"><a class="menu__link menu__link--footer" href="#">about us</a></li>
                     <li class="menu__item menu__item--footer"><a class="menu__link menu__link--footer" href="#">sitemap</a></li>
                     <li class="menu__item menu__item--footer"><a class="menu__link menu__link--footer" href="#">provacy policy</a></li>
+                  </ul>
+                  <ul class="menu__list menu__list--footer menu__list--footer-bot">
                     <li class="menu__item menu__item--footer"><a class="menu__link menu__link--footer" href="#">disclosure</a></li>
                     <li class="menu__item menu__item--footer"><a class="menu__link menu__link--footer" href="#">medical</a></li>
                     <li class="menu__item menu__item--footer"><a class="menu__link menu__link--footer" href="#">disclaimer</a></li>
@@ -556,7 +557,7 @@
                 </article>
               </div>
               <div class="footer__social">
-                <article class="social footer__block footer__block--left">
+                <article class="social social--footer footer__block footer__block--left">
                   <h3 class="social__title social__title--footer">Follow #MyPetsNessThat</h3>
                   <ul class="social__list">
                     <li class="social__item social__item--footer"><a class="social__link social__link--footer" href="#" target="_blank">

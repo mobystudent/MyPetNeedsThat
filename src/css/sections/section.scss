@@ -5,30 +5,58 @@
 		background: $lightGreen;
 		padding: 40px 0 25px;
 		margin-bottom: 85px;
+
+		@media screen and (max-width: 1023px) {
+			padding-top: 25px;
+		}
 	}
 
 	&--prizes {
 		margin-bottom: 50px;
+
+		@media screen and (max-width: 1023px) {
+			margin-bottom: 40px;
+		}
 	}
 
 	&--review {
 		margin-bottom: 110px;
+
+		@media screen and (max-width: 1023px) {
+			margin-bottom: 75px;
+		}
 	}
 
 	&--shampoo {
 		margin-bottom: 145px;
+
+		@media screen and (max-width: 1023px) {
+			margin-bottom: 90px;
+		}
 	}
 
 	&--context {
 		margin-bottom: 200px;
+
+		@media screen and (max-width: 1023px) {
+			margin-bottom: 120px;
+		}
 	}
 
 	&--faq {
 		margin-bottom: 185px;
+
+		@media screen and (max-width: 1023px) {
+			margin-bottom: 100px;
+		}
 	}
 
 	&--related {
 		margin-bottom: 100px;
+
+		@media screen and (max-width: 1023px) {
+			margin-bottom: 70px;
+		}
 	}
 
 	&--possibly {
@@ -52,6 +80,12 @@
 				@media screen and (max-width: 1365px) {
 					right: -255px;
 				}
+
+				@media screen and (max-width: 1023px) {
+					right: -215px;
+					width: 600px;
+					height: 255px;
+				}
 			}
 		}
 
@@ -62,6 +96,10 @@
 
 		&--context {
 			margin-bottom: 70px;
+
+			@media screen and (max-width: 1023px) {
+				margin-bottom: 50px;
+			}
 		}
 
 		&--author {
@@ -82,6 +120,12 @@
 				background: url("../img/dog.png") no-repeat;
 				background-size: cover;
 				z-index: -1;
+
+				@media screen and (max-width: 1023px) {
+					top: 90%;
+					right: 50%;
+					transform: translateX(50%);
+				}
 			}
 
 			&:after {
@@ -99,10 +143,21 @@
 
 		&--post {
 			display: flex;
+
+			@media screen and (max-width: 1023px) {
+				flex-flow: wrap;
+				justify-content: space-between;
+				align-items: flex-start;
+				padding: 0 30px;
+			}
 		}
 
 		&--possibly {
 			padding: 50px 0 70px;
+
+			@media screen and (max-width: 1023px) {
+				padding-bottom: 50px;
+			}
 		}
 
 		&--post-link {
@@ -113,6 +168,13 @@
 
 			@media screen and (max-width: 1365px) {
 				margin-right: -20px;
+				margin-bottom: -25px;
+			}
+
+			@media screen and (max-width: 1023px) {
+				justify-content: space-between;
+				padding: 0 30px;
+				margin-right: 0;
 			}
 		}
 	}
@@ -122,10 +184,19 @@
 		letter-spacing: .02em;
 		color: $darkGreen;
 
+		@media screen and (max-width: 1023px) {
+			font-size: 32px;
+		}
+
 		&--main {
 			font-size: 50px;
 			margin-bottom: 15px;
 			max-width: 600px;
+
+			@media screen and (max-width: 1023px) {
+				font-size: 44px;
+				max-width: 500px;
+			}
 		}
 
 		&--shampoo {
@@ -135,10 +206,21 @@
 			@media screen and (max-width: 1365px) {
 				margin-bottom: 50px;
 			}
+
+			@media screen and (max-width: 1023px) {
+				padding-left: 0;
+				margin-bottom: 30px;
+				text-align: center;
+			}
 		}
 
 		&--faq {
 			margin-bottom: 30px;
+
+			@media screen and (max-width: 1023px) {
+				margin-bottom: 20px;
+				text-align: center;
+			}
 		}
 
 		&--related {
@@ -149,6 +231,10 @@
 		&--possibly {
 			text-align: center;
 			margin-bottom: 60px;
+
+			@media screen and (max-width: 1023px) {
+				margin-bottom: 40px;
+			}
 		}
 	}
 
@@ -159,12 +245,21 @@
 
 		&--faq {
 			max-width: 500px;
+
+			@media screen and (max-width: 1023px) {
+				text-align: center;
+				margin: 0 auto 25px;
+			}
 		}
 
 		&--related {
 			max-width: 670px;
 			text-align: center;
 			margin: 0 auto 50px;
+
+			@media screen and (max-width: 1023px) {
+				margin-bottom: 30px;
+			}
 		}
 	}
 }

@@ -38,6 +38,11 @@
 			padding: 30px 40px 85px;
 		}
 
+		@media screen and (max-width: 1023px) {
+			flex-flow: column;
+			padding-bottom: 50px;
+		}
+
 		&:before {
 			content: '';
 			position: absolute;

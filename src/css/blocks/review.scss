@@ -28,6 +28,10 @@
 		display: flex;
 		font: 20px/150% $ProximaNovaSoftBold;
 		margin-bottom: 5px;
+
+		@media screen and (max-width: 1023px) {
+			font-size: 18px;
+		}
 	}
 
 	&__guide {

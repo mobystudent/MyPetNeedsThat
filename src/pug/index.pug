@@ -76,32 +76,30 @@ block content
 							- const { title: shampooTitle = '', descrip: shampooDescrip = '', img: shampooImg = '', features = [], specifications = {}, pros = [], cons = [] } = shampoo[i];
 						
 							article.shampoo(class=`shampoo--${(i % 2) ? 'right' : 'left'}`)
-								.shampoo__wrap
+								.shampoo__content
 									.shampoo__wrap-img
 										picture.shampoo__img.img
 											img.img__item(src=`img/${shampooImg}.png` alt=`${shampooImg}`)
-									.shampoo__content
-										.shampoo__descrip
-											h3.shampoo__title.shampoo__title--main=shampooTitle
-											p.shampoo__text=shampooDescrip
-										.shampoo__blocks
-											.shampoo__block.shampoo__block--features
-												h4.shampoo__title.shampoo__title--block Key Features
-												ul.shampoo__list
-													
-													- for (let j = 0; j < features.length; j++)
-											
-														li.shampoo__item.shampoo__item--features=features[j]
-											
-											.shampoo__block.shampoo__block--specif
-												h4.shampoo__title.shampoo__title--block Specifications
-												ul.shampoo__list
-											
-													- for (let k = 0; k < specifFields.length; k++)
-											
-														li.shampoo__item.shampoo__item--specif
-															span.shampoo__name=specifFields[k] + ':'
-															span.shampoo__value=specifications[specifFields[k]]
+									h3.shampoo__title.shampoo__title--main=shampooTitle
+									p.shampoo__descrip=shampooDescrip
+									.shampoo__blocks
+										.shampoo__block.shampoo__block--features
+											h4.shampoo__title.shampoo__title--block Key Features
+											ul.shampoo__list
+												
+												- for (let j = 0; j < features.length; j++)
+										
+													li.shampoo__item.shampoo__item--features=features[j]
+										
+										.shampoo__block.shampoo__block--specif
+											h4.shampoo__title.shampoo__title--block Specifications
+											ul.shampoo__list
+										
+												- for (let k = 0; k < specifFields.length; k++)
+										
+													li.shampoo__item.shampoo__item--specif
+														span.shampoo__name=specifFields[k] + ':'
+														span.shampoo__value=specifications[specifFields[k]]
 															
 								article.action
 																		

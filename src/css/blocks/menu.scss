@@ -6,6 +6,11 @@
 			@media screen and (max-width: 1365px) {
 				margin-right: 55px;
 			}
+
+			@media screen and (max-width: 1023px) {
+				margin-right: 0;
+				margin-bottom: 25px;
+			}
 		}
 
 		&-active {
@@ -78,8 +83,22 @@
 		}
 	}
 
+	&__list {
+		&--header {
+			@media screen and (max-width: 1023px) {
+				display: flex;
+				flex-flow: wrap;
+			}
+		}
+	}
+
 	&__item {
 		&--header {
+			@media screen and (max-width: 1023px) {
+				width: 30%;
+				margin-right: 20px;
+			}
+
 			&:not(:last-child) {
 				margin-bottom: 10px;
 			}

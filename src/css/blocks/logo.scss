@@ -3,11 +3,19 @@
 
 	&--header {
 		width: 228px;
-		height: 36px;
+		height: auto;
+
+		@media screen and (max-width: 1023px) {
+			width: 190px;
+		}
 	}
 
 	&--footer {
 		width: 264px;
-		height: 41px;
+		height: auto;
+
+		@media screen and (max-width: 1023px) {
+			width: 225px;
+		}
 	}
 }

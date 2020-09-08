@@ -17,6 +17,11 @@
 		overflow: scroll;
 	}
 
+	@media screen and (max-width: 374px) {
+		top: 60px;
+		height: calc(100vh - 60px);
+	}
+
 	&__tab {
 		position: absolute;
 		top: -60px;
@@ -57,6 +62,7 @@
 		@media screen and (max-width: 767px) {
 			border-radius: 0;
 			box-shadow: none;
+			padding-bottom: 40px;
 		}
 
 		&:before {

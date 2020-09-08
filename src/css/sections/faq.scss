@@ -10,6 +10,10 @@
 		padding: 90px 0 400px;
 	}
 
+	@media screen and (max-width: 374px) {
+		padding-bottom: 300px;
+	}
+
 	&:before {
 		content: '';
 		position: absolute;
@@ -81,6 +85,11 @@
 			padding-right: 45px;
 			margin-bottom: 55px;
 		}
+
+		@media screen and (max-width: 374px) {
+			padding: 10px 45px 20px 20px;
+			margin-bottom: 40px;
+		}
 	}
 
 	&__list {
@@ -96,6 +105,10 @@
 		padding: 15px 0;
 		border-bottom: 1px solid $gray;
 
+		@media screen and (max-width: 374px) {
+			padding: 10px 0;
+		}
+
 		&:first-child { //delete
 			.faq__wrap {
 				display: block;
@@ -109,8 +122,13 @@
 		display: none;
 
 		@media screen and (max-width: 767px) {
-			margin-top: 15px;
+			padding-top: 15px;
 			padding-bottom: 0;
+		}
+
+		@media screen and (max-width: 374px) {
+			padding-top: 10px;
+			padding-right: 30px;
 		}
 	}
 
@@ -127,11 +145,19 @@
 			font-size: 18px;
 			line-height: 125%;
 		}
+
+		@media screen and (max-width: 374px) {
+			font-size: 16px;
+		}
 	}
 
 	&__text {
 		font: 16px/150% $ProximaNovaSoftRegular;
 		color: $dimGreen;
+
+		@media screen and (max-width: 374px) {
+			line-height: 130%;
+		}
 	}
 
 	&__plus {

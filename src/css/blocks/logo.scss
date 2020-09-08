@@ -12,6 +12,10 @@
 		@media screen and (max-width: 767px) {
 			width: 170px;
 		}
+
+		@media screen and (max-width: 374px) {
+			width: 160px;
+		}
 	}
 
 	&--footer {
@@ -24,6 +28,10 @@
 
 		@media screen and (max-width: 767px) {
 			width: 170px;
+		}
+
+		@media screen and (max-width: 374px) {
+			width: 160px;
 		}
 	}
 }

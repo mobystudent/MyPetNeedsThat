@@ -39,6 +39,15 @@ body {
 			width: 1400px;
 			margin: 0 -30px;
 		}
+
+		@media screen and (max-width: 767px) {
+			top: 3%;
+			height: 195%;
+			width: calc(100% + 30px);
+			background: url("../img/main-bg-mob.png") no-repeat;
+			background-size: contain;
+			margin: 0 -15px;
+		}
 	}
 }
 

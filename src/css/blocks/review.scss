@@ -9,6 +9,10 @@
 			padding: 0 10px;
 			margin-bottom: 35px;
 		}
+
+		@media screen and (max-width: 374px) {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__avatar {
@@ -41,6 +45,10 @@
 			padding-top: 0;
 			margin-bottom: 40px;
 		}
+
+		@media screen and (max-width: 374px) {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__user {
@@ -55,11 +63,20 @@
 		@media screen and (max-width: 767px) {
 			flex-flow: column;
 		}
+
+		@media screen and (max-width: 374px) {
+			font-size: 16px;
+			line-height: 140%;
+		}
 	}
 
 	&__guide {
 		color: $dimGreen;
 		margin-right: 5px;
+
+		@media screen and (max-width: 767px) {
+			margin-right: 0;
+		}
 	}
 
 	&__name {

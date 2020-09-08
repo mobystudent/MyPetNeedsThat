@@ -10,6 +10,10 @@
 		margin-bottom: 40px;
 	}
 
+	@media screen and (max-width: 374px) {
+		padding: 25px 20px;
+	}
+
 	&__title {
 		font: 38px/150% $ProximaNovaSoftBold;
 		text-align: center;
@@ -26,6 +30,10 @@
 			line-height: 120%;
 			margin-bottom: 20px;
 		}
+
+		@media screen and (max-width: 374px) {
+			font-size: 22px;
+		}
 	}
 
 	&__list {
@@ -36,16 +44,30 @@
 		}
 	}
 
-	&__item, &__text {
+	&__item {
 		font: 18px/120% $ProximaNovaSoftBold;
 		color: $darkDimGreen;
-		margin-bottom: 25px;
 		padding-right: 5px;
 
 		@media screen and (max-width: 767px) {
 			padding-right: 0;
-			margin-bottom: 15px;
 			font-size: 17px;
+		}
+
+		@media screen and (max-width: 374px) {
+			font-size: 16px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 25px;
+
+			@media screen and (max-width: 767px) {
+				margin-bottom: 15px;
+			}
+
+			@media screen and (max-width: 374px) {
+				margin-bottom: 10px;
+			}
 		}
 	}
 }

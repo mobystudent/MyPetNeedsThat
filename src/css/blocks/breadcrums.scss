@@ -10,16 +10,28 @@
 		margin-bottom: 65px;
 	}
 
+	@media screen and (max-width: 374px) {
+		margin-bottom: 30px;
+	}
+
 	&__link {
 		display: inline-block;
 		color: $darkGreen;
-		font: 16px/150% $ProximaNovaSoftBold;
+		font: 16px $ProximaNovaSoftBold;
 		opacity: .5;
 		transition: opacity .25s ease-in-out;
+
+		@media screen and (max-width: 374px) {
+			font-size: 14px;
+		}
 
 		&:not(:last-child) {
 			margin-right: 20px;
 			position: relative;
+
+			@media screen and (max-width: 374px) {
+				margin-right: 15px;
+			}
 
 			&:before {
 				content: '';
@@ -31,6 +43,12 @@
 				transform: translateY(-50%);
 				background: url("../img/arrow.svg") no-repeat;
 				background-size: cover;
+
+				@media screen and (max-width: 374px) {
+					right: -10px;
+					width: 4px;
+					height: 8px;
+				}
 			}
 		}
 

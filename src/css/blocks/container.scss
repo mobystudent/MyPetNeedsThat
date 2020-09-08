@@ -20,6 +20,10 @@
 		@media screen and (max-width: 767px) {
 			width: 375px;
 		}
+
+		@media screen and (max-width: 374px) {
+			width: 100%;
+		}
 	}
 
 	&--small {
@@ -31,6 +35,10 @@
 
 		@media screen and (max-width: 767px) {
 			width: 375px;
+		}
+
+		@media screen and (max-width: 374px) {
+			width: 100%;
 		}
 	}
 }

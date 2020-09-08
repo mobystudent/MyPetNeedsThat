@@ -7,6 +7,11 @@
 		z-index: 15;
 		transition: transform .25s ease-in-out;
 
+		@media screen and (max-width: 374px) {
+			width: 22px;
+			height: 19px;
+		}
+
 		&:hover {
 			.btn__line {
 				background: $darkDimGreen;
@@ -19,6 +24,10 @@
 					width: 28px;
 					transform: rotate(45deg);
 					transform-origin: left;
+
+					@media screen and (max-width: 374px) {
+						width: 22px;
+					}
 				}
 
 				&--mid {
@@ -29,6 +38,10 @@
 					width: 28px;
 					transform: rotate(-45deg);
 					transform-origin: left;
+
+					@media screen and (max-width: 374px) {
+						width: 22px;
+					}
 				}
 			}
 		}
@@ -59,6 +72,10 @@
 		margin: 0 auto;
 		text-transform: uppercase;
 		z-index: 2;
+
+		@media screen and (max-width: 374px) {
+			font-size: 16px;
+		}
 
 		&:before {
 			content: '';
@@ -126,6 +143,10 @@
 		position: relative;
 		transition: color .25s ease-in-out;
 		z-index: 2;
+
+		@media screen and (max-width: 374px) {
+			font-size: 16px;
+		}
 
 		&:before {
 			content: '';
@@ -206,10 +227,18 @@
 
 		&--mid {
 			top: 10px;
+
+			@media screen and (max-width: 374px) {
+				top: 8px;
+			}
 		}
 
 		&--bot {
 			top: 20px;
+
+			@media screen and (max-width: 374px) {
+				top: 16px;
+			}
 		}
 
 		&--border {

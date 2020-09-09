@@ -79,6 +79,7 @@ function __initSlider() {
 function __sliderItem(sliderName, breakPoint) {
 		if(!sliderName.hasClass('slick-initialized') && window.innerWidth < breakPoint)
 			sliderName.slick({
+				infinite: false,
 				speed: 500,
 				slidesToShow: 1,
 				easing: 'ease-in-out',

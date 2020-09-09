@@ -20,6 +20,11 @@
 	&--premium {
 		width: 75px;
 		height: 86px;
+
+		@media screen and (max-width: 767px) {
+			width: 80px;
+			height: 80px;
+		}
 	}
 
 	&--best-value {

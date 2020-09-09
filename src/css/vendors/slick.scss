@@ -50,11 +50,11 @@
 			left: 0;
 		}
 
-		// .slick-list {
-		// 	@media screen and (max-width: 767px) {
-		// 		margin: 0 -30px;
-		// 	}
-		// }
+		.slick-list {
+			@media screen and (max-width: 767px) {
+				margin: 0 -30px;
+			}
+		}
 	}
 
 	&--post {

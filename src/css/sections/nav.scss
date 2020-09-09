@@ -4,7 +4,7 @@
 	left: -15px;
 	width: 1160px;
 	z-index: 10;
-	display: none;
+	overflow: hidden;
 
 	@media screen and (max-width: 1365px) {
 		width: 100%;
@@ -22,6 +22,25 @@
 		height: calc(100vh - 60px);
 	}
 
+	&--active {
+		overflow: visible;
+
+		.nav {
+			&__tab {
+				transform: translateY(0);
+				opacity: 1;
+			}
+
+			&__wrap:before {
+				transform: translateY(0);
+			}
+		}
+	}
+
+	&__content {
+		display: none;
+	}
+
 	&__tab {
 		position: absolute;
 		top: -60px;
@@ -35,7 +54,10 @@
 		border-radius: 5px;
 		text-align: center;
 		padding: 15px 30px 20px;
-		z-index: -1;
+		z-index: 5;
+		transform: translateY(100%);
+		transition: transform .5s ease-in-out, opacity .25s ease-in-out .25s;
+		opacity: 0;
 
 		@media screen and (max-width: 767px) {
 			display: none;
@@ -49,6 +71,7 @@
 		border-radius: 5px 5px 10px 10px;
 		background: $white;
 		position: relative;
+		z-index: 5;
 
 		@media screen and (max-width: 1365px) {
 			padding: 30px 40px 85px;
@@ -74,6 +97,8 @@
 			height: 20px;
 			background: $white;
 			z-index: 1;
+			transform: translateY(100%);
+			transition: transform .25s ease-in-out;
 
 			@media screen and (max-width: 767px) {
 				display: none;

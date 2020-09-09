@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
     <title>Главная</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script type="text/javascript" defer src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.dotdotdot/3.2.3/jquery.dotdotdot.js"></script>
     <script type="text/javascript" defer src="js/script.js"></script>
   </head>
   <body>
@@ -84,54 +86,56 @@
               </svg></a>
             <nav class="nav">
               <div class="nav__tab">All Categories</div>
-              <div class="nav__wrap">
-                <article class="menu menu--header">
-                  <h3 class="menu__title"><span class="menu__text menu__text--dog">dogs</span></h3>
-                  <ul class="menu__list menu__list--header">
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Dogs Equipment</a></li>
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Dogs Food</a></li>
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Dogs Health</a></li>
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Dogs Training</a></li>
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Dogs Breeds</a></li>
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Puppies</a></li>
-                  </ul>
-                </article>
-                <article class="menu menu--header">
-                  <h3 class="menu__title"><span class="menu__text menu__text--cat">cats</span></h3>
-                  <ul class="menu__list menu__list--header">
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Cats Equipment</a></li>
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Cats Food</a></li>
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Cats Health</a></li>
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Cats Training</a></li>
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Cats Breeds</a></li>
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">kitties</a></li>
-                  </ul>
-                </article>
-                <article class="menu menu--header">
-                  <h3 class="menu__title"><span class="menu__text menu__text--fish">fish</span></h3>
-                  <ul class="menu__list menu__list--header">
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Food Treatment</a></li>
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Aquariums</a></li>
-                  </ul>
-                </article>
-                <article class="menu menu--header">
-                  <h3 class="menu__title"><span class="menu__text menu__text--parrot">birds</span></h3>
-                  <ul class="menu__list menu__list--header">
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Food</a></li>
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Accessories</a></li>
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Care</a></li>
-                  </ul>
-                </article>
-                <article class="menu menu--header">
-                  <h3 class="menu__title"><span class="menu__text menu__text--rat">small animals</span></h3>
-                  <ul class="menu__list menu__list--header">
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Hamsters</a></li>
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Gerbils</a></li>
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Rabbits</a></li>
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Rats</a></li>
-                    <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Guinea Pigs</a></li>
-                  </ul>
-                </article>
+              <div class="nav__content">
+                <div class="nav__wrap">
+                  <article class="menu menu--header">
+                    <h3 class="menu__title"><span class="menu__text menu__text--dog">dogs</span></h3>
+                    <ul class="menu__list menu__list--header">
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Dogs Equipment</a></li>
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Dogs Food</a></li>
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Dogs Health</a></li>
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Dogs Training</a></li>
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Dogs Breeds</a></li>
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Puppies</a></li>
+                    </ul>
+                  </article>
+                  <article class="menu menu--header">
+                    <h3 class="menu__title"><span class="menu__text menu__text--cat">cats</span></h3>
+                    <ul class="menu__list menu__list--header">
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Cats Equipment</a></li>
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Cats Food</a></li>
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Cats Health</a></li>
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Cats Training</a></li>
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Cats Breeds</a></li>
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">kitties</a></li>
+                    </ul>
+                  </article>
+                  <article class="menu menu--header">
+                    <h3 class="menu__title"><span class="menu__text menu__text--fish">fish</span></h3>
+                    <ul class="menu__list menu__list--header">
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Food Treatment</a></li>
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Aquariums</a></li>
+                    </ul>
+                  </article>
+                  <article class="menu menu--header">
+                    <h3 class="menu__title"><span class="menu__text menu__text--parrot">birds</span></h3>
+                    <ul class="menu__list menu__list--header">
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Food</a></li>
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Accessories</a></li>
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Care</a></li>
+                    </ul>
+                  </article>
+                  <article class="menu menu--header">
+                    <h3 class="menu__title"><span class="menu__text menu__text--rat">small animals</span></h3>
+                    <ul class="menu__list menu__list--header">
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Hamsters</a></li>
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Gerbils</a></li>
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Rabbits</a></li>
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Rats</a></li>
+                      <li class="menu__item menu__item--header"><a class="menu__link menu__link--header" href="#">Guinea Pigs</a></li>
+                    </ul>
+                  </article>
+                </div>
               </div>
             </nav>
           </div>
@@ -215,8 +219,8 @@
                     <li class="recommend__item">Vet’s Best Allergy Itch Relief Dog Shampoo</li>
                   </ol>
                 </article>
-                <div class="content">
-                  <p>Dog shampoos are important <span class="highlight">canine care products</span> that are geared primarily for the maintenance of their hygiene. Some products actually come with different formulations to help in the control and management of pests like fleas and ticks. However useful, some canine shampoos contain harsh ingredients that may pose a threat to your <span class="highlight">pet’s health</span>. It is therefore, important for you to learn how to choose the correct hair care product for your pet. We have researched the market for the best dog shampoo to help you get started.</p>
+                <div class="review__descrip">
+                  <p class="review__text">Dog shampoos are important <span class="highlight">canine care products</span> that are geared primarily for the maintenance of their hygiene. Some products actually come with different formulations to help in the control and management of pests like fleas and ticks. However useful, some canine shampoos contain harsh ingredients that may pose a threat to your <span class="highlight">pet’s health</span>. It is therefore, important for you to learn how to choose the correct hair care product for your pet. We have researched the market for the best dog shampoo to help you get started.</p>
                 </div>
               </article>
             </div>
@@ -459,6 +463,38 @@
                       <p class="faq__text">You should clean your pet out at least once or twice a week. A regular clean out not only provides a hygienic and safe environment for your pet but also the ideal opportunity to bond with them and check them over.</p>
                     </div>
                   </div>
+                  <div class="faq__item">
+                    <header class="faq__header">
+                      <h3 class="faq__title">5. What is the best diet to feed my new pet?</h3><small class="faq__plus"></small>
+                    </header>
+                    <div class="faq__wrap">
+                      <p class="faq__text">You should clean your pet out at least once or twice a week. A regular clean out not only provides a hygienic and safe environment for your pet but also the ideal opportunity to bond with them and check them over.</p>
+                    </div>
+                  </div>
+                  <div class="faq__item">
+                    <header class="faq__header">
+                      <h3 class="faq__title">6. What is the best diet to feed my new pet?</h3><small class="faq__plus"></small>
+                    </header>
+                    <div class="faq__wrap">
+                      <p class="faq__text">You should clean your pet out at least once or twice a week. A regular clean out not only provides a hygienic and safe environment for your pet but also the ideal opportunity to bond with them and check them over.</p>
+                    </div>
+                  </div>
+                  <div class="faq__item">
+                    <header class="faq__header">
+                      <h3 class="faq__title">7. What is the best diet to feed my new pet?</h3><small class="faq__plus"></small>
+                    </header>
+                    <div class="faq__wrap">
+                      <p class="faq__text">You should clean your pet out at least once or twice a week. A regular clean out not only provides a hygienic and safe environment for your pet but also the ideal opportunity to bond with them and check them over.</p>
+                    </div>
+                  </div>
+                  <div class="faq__item">
+                    <header class="faq__header">
+                      <h3 class="faq__title">8. What is the best diet to feed my new pet?</h3><small class="faq__plus"></small>
+                    </header>
+                    <div class="faq__wrap">
+                      <p class="faq__text">You should clean your pet out at least once or twice a week. A regular clean out not only provides a hygienic and safe environment for your pet but also the ideal opportunity to bond with them and check them over.</p>
+                    </div>
+                  </div>
                 </div>
               </div><a class="btn btn--main btn--main-faq" href="#">show more</a>
             </div>
@@ -475,7 +511,7 @@
                   <div class="post__content">
                     <div class="post__wrap">
                       <h3 class="post__title">10 Tips for Taking a Road Trip With Your Dog</h3>
-                      <p class="post__descrip">There are few things as fun and relaxing as taking a road trip...</p>
+                      <p class="post__descrip">There are few things as fun and relaxing as taking a road trip out not only provides a hygienic and safe environment for your pet but also the ideal opportunity to bond with them and check them over.</p>
                     </div><span class="btn btn--inline btn--inline-post" href="#">Read More<small class="btn__plus"></small></span>
                   </div><a class="post__link" href="#"></a>
                 </article>
@@ -484,7 +520,7 @@
                   <div class="post__content">
                     <div class="post__wrap">
                       <h3 class="post__title">Pitbul Mastiff Mix: Facts &amp; Temperament</h3>
-                      <p class="post__descrip">Pitbull Mastiff is a big dog that also looks tough to strangers...</p>
+                      <p class="post__descrip">Pitbull Mastiff is a big dog that also looks tough to strangers out not only provides a hygienic and safe environment for your pet but also the ideal opportunity to bond with them and check them over.</p>
                     </div><span class="btn btn--inline btn--inline-post" href="#">Read More<small class="btn__plus"></small></span>
                   </div><a class="post__link" href="#"></a>
                 </article>
@@ -493,7 +529,7 @@
                   <div class="post__content">
                     <div class="post__wrap">
                       <h3 class="post__title">How Many Teeth Do Adoult dogs Have?</h3>
-                      <p class="post__descrip">The anatomy of a dog is fascinating because every part...</p>
+                      <p class="post__descrip">The anatomy of a dog is fascinating because every part out not only provides a hygienic and safe environment for your pet but also the ideal opportunity to bond with them and check them over.</p>
                     </div><span class="btn btn--inline btn--inline-post" href="#">Read More<small class="btn__plus"></small></span>
                   </div><a class="post__link" href="#"></a>
                 </article>
@@ -502,7 +538,7 @@
                   <div class="post__content">
                     <div class="post__wrap">
                       <h3 class="post__title">The Best Cat Litter (Rewiew) in 2020</h3>
-                      <p class="post__descrip">While it’s true that we all love our cats to the moon and back...</p>
+                      <p class="post__descrip">While it’s true that we all love our cats to the moon and back out not only provides a hygienic and safe environment for your pet but also the ideal opportunity to bond with them and check them over.</p>
                     </div><span class="btn btn--inline btn--inline-post" href="#">Read More<small class="btn__plus"></small></span>
                   </div><a class="post__link" href="#"></a>
                 </article>

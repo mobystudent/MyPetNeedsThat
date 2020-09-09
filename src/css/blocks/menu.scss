@@ -81,6 +81,14 @@
 			transition: opacity .25s ease-in-out;
 		}
 
+		&--active {
+			opacity: 1;
+
+			&:before {
+				opacity: 1;
+			}
+		}
+
 		&--dog {
 			&:before {
 				background: url("../img/dog.svg") no-repeat;

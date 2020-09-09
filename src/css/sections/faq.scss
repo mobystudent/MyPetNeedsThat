@@ -65,8 +65,7 @@
 		border-radius: 10px;
 		padding: 15px 85px 30px 30px;
 		width: 715px;
-		height: 100%;
-		max-height: 730px;
+		height: 370px;
 		margin-left: -25px;
 		margin-bottom: 55px;
 
@@ -108,12 +107,6 @@
 		@media screen and (max-width: 374px) {
 			padding: 10px 0;
 		}
-
-		&:first-child { //delete
-			.faq__wrap {
-				display: block;
-			}
-		}
 	}
 
 	&__wrap {
@@ -135,6 +128,7 @@
 	&__header {
 		display: flex;
 		justify-content: space-between;
+		cursor: pointer;
 	}
 
 	&__title {
@@ -164,5 +158,11 @@
 		@extend .btn__plus;
 		margin-left: 20px;
 		margin-top: 5px;
+
+		&--active {
+			&:before {
+				height: 0;
+			}
+		}
 	}
 }

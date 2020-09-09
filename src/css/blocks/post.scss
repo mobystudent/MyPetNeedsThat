@@ -19,9 +19,12 @@
 
 		@media screen and (max-width: 767px) {
 			width: 345px;
+			margin: 10px 30px;
 		}
 
 		@media screen and (max-width: 374px) {
+			margin-right: 20px;
+			margin-left: 20px;
 			width: 290px;
 		}
 

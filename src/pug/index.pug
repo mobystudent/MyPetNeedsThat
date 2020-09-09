@@ -19,24 +19,25 @@ block content
 						h1.section__title.section__title--main The Best Dog Shampoo (Review) in 2020
 						time.time.time--page(datetime="2020-04-10") Last Update: 10 Apr 2020
 						
-			section.section.section--prizes
+			section.section.section--prize
 				.container.container--large
-					.section__wrap.section__wrap--prizes
-												
-						- for (let i = 0; i < prize.length; i++)
-							- const { title: prizeTitle = '', descrip: prizeDescrip = '', img: prizeImg = '', icon: prizeIcon = '' } = prize[i];
-						
-							article.prize
-								.prize__icon
-									svg.icon(class=`icon--${prizeIcon}`)
-										use.icon__item(xlink:href=`#${prizeIcon}`)
-								h3.prize__title=prizeTitle
-								picture.prize__img.img
-									img.img__item(src=`img/${prizeImg}.png` alt=`${prizeImg}`)
-								p.prize__descrip=prizeDescrip
-								span.btn.btn--main check latest price
-								a.prize__link(href="#")
-								
+					.slider.slider--prize
+						.slider__content.slider__content--prize
+			
+							- for (let i = 0; i < prize.length; i++)
+								- const { title: prizeTitle = '', descrip: prizeDescrip = '', img: prizeImg = '', icon: prizeIcon = '' } = prize[i];
+			
+								article.prize
+									.prize__icon
+										svg.icon(class=`icon--${prizeIcon}`)
+											use.icon__item(xlink:href=`#${prizeIcon}`)
+									h3.prize__title=prizeTitle
+									picture.prize__img.img
+										img.img__item(src=`img/${prizeImg}.png` alt=`${prizeImg}`)
+									p.prize__descrip=prizeDescrip
+									span.btn.btn--main check latest price
+									a.prize__link(href="#")
+											
 			section.section.section--review
 				.container.container--small
 					.section__wrap.section__wrap--review
@@ -199,23 +200,24 @@ block content
 						h2.section__title.section__title--related Related Posts
 						p.section__subtitle.section__subtitle--related We have selected the top related posts for our users. Take a look, maybe it will be interesting for you too.
 						
-						.section__wrap.section__wrap--post
+						.slider.slider--post
+							.slider__content.slider__content--post
 							
-							- for (let i = 0; i < post.length; i++)
-							
-								- const { title: postTitle = '', descrip: postDescrip = '', img: postImg = '' } = post[i];
-							
-								article.post.post--item
-									picture.post__img.img
-										img.img__item(src=`img/${postImg}.png` alt=`${postImg}`)
-									.post__content
-										.post__wrap
-											h3.post__title=postTitle
-											p.post__descrip=postDescrip
-										span.btn.btn--inline.btn--inline-post(href="#") Read More
-											small.btn__plus
-									a.post__link(href="#")
-									
+								- for (let i = 0; i < post.length; i++)
+								
+									- const { title: postTitle = '', descrip: postDescrip = '', img: postImg = '' } = post[i];
+								
+									article.post.post--item
+										picture.post__img.img
+											img.img__item(src=`img/${postImg}.png` alt=`${postImg}`)
+										.post__content
+											.post__wrap
+												h3.post__title=postTitle
+												p.post__descrip=postDescrip
+											span.btn.btn--inline.btn--inline-post(href="#") Read More
+												small.btn__plus
+										a.post__link(href="#")
+																			
 			section.section.section--possibly
 				.container.container--large
 					.section__wrap.section__wrap--possibly

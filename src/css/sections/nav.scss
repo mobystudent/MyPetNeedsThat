@@ -12,14 +12,13 @@
 
 	@media screen and (max-width: 767px) {
 		top: 65px;
-		width: calc(100% + 30px);
-		height: calc(100vh - 55px);
-		overflow: scroll;
+		width: 100vw;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	@media screen and (max-width: 374px) {
 		top: 60px;
-		height: calc(100vh - 60px);
 	}
 
 	&--active {
@@ -39,6 +38,15 @@
 
 	&__content {
 		display: none;
+
+		@media screen and (max-width: 767px) {
+			height: calc(100vh - 55px);
+			overflow: scroll;
+		}
+
+		@media screen and (max-width: 374px) {
+			height: calc(100vh - 60px);
+		}
 	}
 
 	&__tab {

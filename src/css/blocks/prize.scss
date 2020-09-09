@@ -16,12 +16,16 @@
 
 	@media screen and (max-width: 1023px) {
 		margin-right: 0;
+		width: 360px;
+		margin: 40px 30px 15px;
 	}
 
 	@media screen and (max-width: 767px) {
 		width: 345px;
 		padding-left: 40px;
 		padding-right: 40px;
+		flex: 1 0 auto;
+		height: 100%;
 	}
 
 	&__icon {
@@ -84,6 +88,10 @@
 
 		@media screen and (max-width: 1365px) {
 			margin-bottom: 50px;
+		}
+
+		@media screen and (max-width: 1023px) {
+			margin-bottom: 100px;
 		}
 
 		@media screen and (max-width: 767px) {

@@ -16,7 +16,7 @@
 		}
 	}
 
-	&--prizes {
+	&--prize {
 		margin-bottom: 50px;
 
 		@media screen and (max-width: 1023px) {
@@ -88,11 +88,11 @@
 		}
 
 		@media screen and (max-width: 767px) {
-			margin-bottom: 100px;
+			margin-bottom: 60px;
 		}
 
 		@media screen and (max-width: 374px) {
-			margin-bottom: 80px;
+			margin-bottom: 40px;
 		}
 	}
 
@@ -135,15 +135,6 @@
 					right: -95%;
 					top: 30%;
 				}
-			}
-		}
-
-		&--prizes {
-			display: flex;
-			margin-right: -30px;
-
-			@media screen and (max-width: 1023px) {
-				margin-right: 0;
 			}
 		}
 
@@ -200,21 +191,6 @@
 				background: url("../img/faq-bg.png") no-repeat;
 				background-size: cover;
 				z-index: -1;
-			}
-		}
-
-		&--post {
-			display: flex;
-
-			@media screen and (max-width: 1023px) {
-				flex-flow: wrap;
-				justify-content: space-between;
-				align-items: flex-start;
-				padding: 0 30px;
-			}
-
-			@media screen and (max-width: 767px) {
-				padding: 0;
 			}
 		}
 

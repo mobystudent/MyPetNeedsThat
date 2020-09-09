@@ -7,7 +7,7 @@
 	}
 
 	@media screen and (max-width: 767px) {
-		padding: 90px 0 400px;
+		padding: 125px 0 430px;
 	}
 
 	@media screen and (max-width: 374px) {
@@ -31,7 +31,7 @@
 		}
 
 		@media screen and (max-width: 767px) {
-			top: 35px;
+			top: 65px;
 			transform: skewY(9deg);
 		}
 	}
@@ -50,11 +50,12 @@
 
 		@media screen and (max-width: 1023px) {
 			display: block;
+			height: 52px;
 		}
 
 		@media screen and (max-width: 767px) {
 			bottom: -35px;
-			height: 70px;
+			height: 100px;
 			transform: skewY(9deg);
 		}
 	}
@@ -63,16 +64,16 @@
 		background: $white;
 		box-shadow: 0px 0px 10px rgba(88, 88, 88, .15);
 		border-radius: 10px;
-		padding: 15px 85px 30px 30px;
+		padding: 15px 30px 30px 30px;
 		width: 715px;
 		height: 370px;
 		margin-left: -25px;
 		margin-bottom: 55px;
+		overflow: hidden;
 
 		@media screen and (max-width: 1365px) {
 			width: 670px;
 			margin-left: 0;
-			padding-right: 60px;
 		}
 
 		@media screen and (max-width: 1023px) {
@@ -81,22 +82,25 @@
 
 		@media screen and (max-width: 767px) {
 			width: 100%;
-			padding-right: 45px;
 			margin-bottom: 55px;
+			padding-right: 20px;
+			padding-left: 20px;
+			height: 515px;
 		}
 
 		@media screen and (max-width: 374px) {
-			padding: 10px 45px 20px 20px;
+			padding: 10px 20px 20px 20px;
 			margin-bottom: 40px;
 		}
 	}
 
 	&__list {
-		overflow: hidden;
-		max-height: 320px;
+		position: relative;
+		height: 100%;
+		padding-right: 55px;
 
-		@media screen and (max-width: 767px) {
-			max-height: 470px;
+		@media screen and (max-width: 1365px) {
+			padding-right: 30px;
 		}
 	}
 
@@ -158,6 +162,10 @@
 		@extend .btn__plus;
 		margin-left: 20px;
 		margin-top: 5px;
+
+		@media screen and (max-width: 767px) {
+			margin-left: 15px;
+		}
 
 		&--active {
 			&:before {

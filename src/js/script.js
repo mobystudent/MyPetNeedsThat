@@ -37,10 +37,12 @@ function __clipText() {
 function windowResize() {
 	__clipText();
 	__initSlider();
+	__setStyleScroll();
 
 	$(window).resize(() => {
 		__clipText();
 		__initSlider();
+		__setStyleScroll();
 	});
 }
 
@@ -92,4 +94,10 @@ function __sliderItem(sliderName, breakPoint) {
 			});
 		else if(sliderName.hasClass('slick-initialized') && window.innerWidth >= breakPoint)
 			sliderName.slick('unslick');
+}
+
+function __setStyleScroll() {
+	let scrollBar = null;
+
+	!scrollBar ? scrollBar = new PerfectScrollbar('.faq__list') : $(window).resize(() => scrollBar.update());
 }

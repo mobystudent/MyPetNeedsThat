@@ -1,0 +1,23 @@
+.ps {
+	overflow: hidden !important;
+	overflow-anchor: none;
+	touch-action: auto;
+
+	&__rail-y {
+		height: 0;
+		top: 0;
+		right: 0;
+		background: $gray;
+		position: absolute;
+		margin-top: 15px;
+		height: calc(100% - 45px);
+		width: 4px;
+	}
+
+	&__thumb-y {
+		background-color: $pink;
+		border-radius: 10px;
+		position: absolute;
+		width: 4px;
+	}
+}

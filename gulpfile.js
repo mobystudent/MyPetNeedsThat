@@ -22,8 +22,7 @@ const dirBuild = 'build',
 			fonts: dirBuild + '/fonts',
 			favicon: dirBuild + '/favicon',
 			img: dirBuild + '/img',
-			js: dirBuild + '/js',
-			data: dirBuild + '/data'
+			js: dirBuild + '/js'
 		},
 		src: {
 			html: dirSrc + '/template/*.html',
@@ -115,12 +114,6 @@ function gulpJS() {
 		.pipe(gulp.dest(path.build.js));
 }
 
-/* testing data to html */
-function gulpData() {
-	return gulp.src(path.src.data)
-		.pipe(gulp.dest(path.build.data));
-}
-
 /* watch src files and show changes in browser */
 function gulpWatch() {
 	browserSync.init({
@@ -134,10 +127,10 @@ function gulpWatch() {
 	gulp.watch(path.watch.img, gulp.series(gulpImages));
 	gulp.watch(path.watch.favicon, gulp.series(gulpFavicon));
 	gulp.watch(path.watch.js, gulp.series(gulpJS));
-	gulp.watch(path.watch.data, gulp.series(gulpData));
+	gulp.watch(path.watch.data, gulp.series(gulpPug));
 }
 
-const dev = gulp.series(clean, gulp.parallel(gulpSass, gulpHTML, gulpPug, gulpFonts, gulpFavicon, gulpJS, gulpImages, gulpData)),
+const dev = gulp.series(clean, gulp.parallel(gulpSass, gulpHTML, gulpPug, gulpFonts, gulpFavicon, gulpJS, gulpImages)),
 	build = gulp.series(clean, gulp.parallel(gulpSass, gulpHTML, gulpFonts, gulpFavicon, gulpJS, gulpImages));
 
 exports.default = build;
@@ -147,4 +140,3 @@ exports.clean = clean;
 exports.js = gulpJS;
 exports.img = gulpImages;
 exports.fonts = gulpFonts;
-exports.data = gulpData;

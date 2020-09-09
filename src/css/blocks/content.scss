@@ -68,6 +68,12 @@
 		span {
 			color: $darkGreen;
 		}
+
+		&:hover, &:active {
+			&:before {
+				height: 130%;
+			}
+		}
 	}
 
 	.video {

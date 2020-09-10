@@ -8,9 +8,7 @@ $(window).on('load', () => {
 });
 
 function breakLinks() {
-	$("a").click(function(e) {
-		e.preventDefault();
-	});
+	$("a").click(e =>  e.preventDefault());
 }
 
 function showRecommend() {

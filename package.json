@@ -4,10 +4,9 @@
   "description": "Окружение для разработки веб-проектов",
   "main": "index.js",
   "scripts": {
-    "watch": "gulp watch --dev",
-    "prodwatch": "gulp watch",
-    "devbuild": "gulp --dev",
-    "build": "gulp",
+    "watch": "gulp watch",
+    "dev": "gulp dev",
+    "build": "gulp build",
     "clean": "gulp clean"
   },
   "keywords": [],
@@ -21,16 +20,18 @@
     "fs": "0.0.1-security",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-imagemin": "^7.1.0",
+    "gulp-minify": "^3.1.0",
     "gulp-pug": "^4.0.1",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5"
   },
   "dependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/node": "^7.8.7",
-    "@babel/polyfill": "^7.8.7",
-    "jquery": "^3.4.1"
+    "@babel/polyfill": "^7.8.7"
   }
 }

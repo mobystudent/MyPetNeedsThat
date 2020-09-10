@@ -8,8 +8,11 @@ const gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	groupcmq = require('gulp-group-css-media-queries'),
 	sourcemaps = require('gulp-sourcemaps'),
-	browserSync = require('browser-sync').create(),
-	fs = require('fs');
+	fs = require('fs'),
+	minify = require('gulp-minify'),
+	cleanCSS = require('gulp-clean-css'),
+	rename = require('gulp-rename'),
+	browserSync = require('browser-sync').create();
 
 /* settings */
 const dirBuild = 'build',
@@ -61,8 +64,12 @@ function gulpSass() {
 		.on('error', sass.logError))
 		.pipe(groupcmq())
 		.pipe(autoprefixer({
+			grid: true,
 			overrideBrowserslist: ['> 0.4%, last 4 versions, firefox >= 52, edge >= 16, ie >= 11, safari >=10']
 		}))
+		.pipe(gulp.dest(path.build.css))
+		.pipe(cleanCSS())
+		.pipe(rename('style.min.css'))
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest(path.build.css));
 }
@@ -111,6 +118,13 @@ function gulpFavicon() {
 /* compile js bundle */
 function gulpJS() {
 	return gulp.src(path.src.js)
+		.pipe(sourcemaps.init())
+		.pipe(minify({
+			ext: {
+				min: '.min.js'
+			}
+		}))
+		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest(path.build.js));
 }
 

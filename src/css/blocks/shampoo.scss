@@ -215,8 +215,6 @@
 
 	&__descrip {
 		grid-column: 2;
-		font: 18px/130% $ProximaNovaSoftRegular;
-		color: $darkGreen;
 		margin-bottom: 35px;
 
 		@media screen and (max-width: 1023px) {
@@ -226,13 +224,10 @@
 		}
 
 		@media screen and (max-width: 767px) {
-			font-size: 17px;
-			line-height: 125%;
 			margin-bottom: 35px;
 		}
 
 		@media screen and (max-width: 374px) {
-			font-size: 16px;
 			margin-bottom: 25px;
 		}
 	}
@@ -273,18 +268,8 @@
 
 	&__item {
 		&--features {
-			font: 18px/125% $ProximaNovaSoftRegular;
-			color: $darkGreen;
 			text-indent: 10px;
 			position: relative;
-
-			@media screen and (max-width: 767px) {
-				font-size: 17px;
-			}
-
-			@media screen and (max-width: 374px) {
-				font-size: 16px;
-			}
 
 			&:not(:last-child) {
 				margin-bottom: 2px;
@@ -330,28 +315,8 @@
 	}
 
 	&__name {
-		font: 18px/125% $ProximaNovaSoftBold;
 		display: inline-block;
 		padding-right: 10px;
-
-		@media screen and (max-width: 767px) {
-			font-size: 17px;
-		}
-
-		@media screen and (max-width: 374px) {
-			font-size: 16px;
-		}
-	}
-
-	&__value {
-		font: 18px/125% $ProximaNovaSoftRegular;
-
-		@media screen and (max-width: 767px) {
-			font-size: 17px;
-		}
-
-		@media screen and (max-width: 374px) {
-			font-size: 16px;
-		}
+		font-family: $ProximaNovaSoftBold;
 	}
 }

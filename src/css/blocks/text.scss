@@ -1,0 +1,14 @@
+.text {
+	&--main {
+		font: 18px/130% $ProximaNovaSoftRegular;
+
+		@media screen and (max-width: 767px) {
+			font-size: 17px;
+			line-height: 125%;
+		}
+
+		@media screen and (max-width: 374px) {
+			font-size: 16px;
+		}
+	}
+}

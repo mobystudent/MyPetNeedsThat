@@ -86,23 +86,9 @@
 
 	&__descrip {
 		overflow: hidden;
-		
+
 		@media screen and (max-width: 767px) {
 			max-height: 100px;
-		}
-	}
-
-	&__text {
-		font: 18px/130% $ProximaNovaSoftRegular;
-		color: $darkGreen;
-
-		@media screen and (max-width: 767px) {
-			font-size: 17px;
-			line-height: 125%;
-		}
-
-		@media screen and (max-width: 374px) {
-			font-size: 16px;
 		}
 	}
 }

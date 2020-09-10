@@ -62,7 +62,7 @@ block content
 										li.recommend__item=recommend[i]
 									
 							.review__descrip
-								p.review__text Dog shampoos are important #[span.highlight canine care products] that are geared primarily for the maintenance of their hygiene. Some products actually come with different formulations to help in the control and management of pests like fleas and ticks. However useful, some canine shampoos contain harsh ingredients that may pose a threat to your #[span.highlight pet’s health]. It is therefore, important for you to learn how to choose the correct hair care product for your pet. We have researched the market for the best dog shampoo to help you get started.
+								p.text.text--main Dog shampoos are important #[span.highlight canine care products] that are geared primarily for the maintenance of their hygiene. Some products actually come with different formulations to help in the control and management of pests like fleas and ticks. However useful, some canine shampoos contain harsh ingredients that may pose a threat to your #[span.highlight pet’s health]. It is therefore, important for you to learn how to choose the correct hair care product for your pet. We have researched the market for the best dog shampoo to help you get started.
 								
 			section.section.section--shampoo
 				.container.container--large
@@ -82,7 +82,7 @@ block content
 										picture.shampoo__img.img
 											img.img__item(src=`img/${shampooImg}.png` alt=`${shampooImg}`)
 									h3.shampoo__title.shampoo__title--main=shampooTitle
-									p.shampoo__descrip=shampooDescrip
+									p.shampoo__descrip.text.text--main=shampooDescrip
 									.shampoo__blocks
 										.shampoo__block.shampoo__block--features
 											h4.shampoo__title.shampoo__title--block Key Features
@@ -90,7 +90,7 @@ block content
 												
 												- for (let j = 0; j < features.length; j++)
 										
-													li.shampoo__item.shampoo__item--features=features[j]
+													li.shampoo__item.shampoo__item--features.text.text--main=features[j]
 										
 										.shampoo__block.shampoo__block--specif
 											h4.shampoo__title.shampoo__title--block Specifications
@@ -99,8 +99,8 @@ block content
 												- for (let k = 0; k < specifFields.length; k++)
 										
 													li.shampoo__item.shampoo__item--specif
-														span.shampoo__name=specifFields[k] + ':'
-														span.shampoo__value=specifications[specifFields[k]]
+														span.shampoo__name.text.text--main=specifFields[k] + ':'
+														span.shampoo__value.text.text--main=specifications[specifFields[k]]
 															
 								article.action
 																		

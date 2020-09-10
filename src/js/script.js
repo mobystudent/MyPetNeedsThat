@@ -41,6 +41,7 @@ function windowResize() {
 		__clipText();
 		__initSlider();
 		__setStyleScroll();
+		__burgerWrapperToResize();
 	});
 }
 
@@ -51,7 +52,17 @@ function burger() {
 		$(this).toggleClass("btn--burger-active");
 		$(".nav").toggleClass("nav--active");
 		$(".nav__content").slideToggle();
+
+		__burgerWrapperToResize();
 	});
+}
+
+function __burgerWrapperToResize() {
+	if(window.innerWidth < 768 && $(".btn--burger").hasClass("btn--burger-active")) {
+		$(".wrapper").addClass("wrapper--hidden");
+	} else if ((window.innerWidth < 768 && !$(".btn--burger").hasClass("btn--burger-active")) || window.innerWidth >= 768) {
+		$(".wrapper").removeClass("wrapper--hidden");
+	}
 }
 
 function backlightTitleMenu() {

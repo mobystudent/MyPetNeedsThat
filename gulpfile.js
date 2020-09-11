@@ -28,7 +28,7 @@ const dirBuild = 'build',
 			js: dirBuild + '/js'
 		},
 		src: {
-			html: dirSrc + '/template/!(header|sprite|footer|layout).html',
+			html: dirSrc + '/template/*.html',
 			css: dirSrc + '/css/style.scss',
 			pug: dirSrc + '/pug/**/*.pug',
 			fonts: dirSrc + '/fonts/**/*',
@@ -144,12 +144,13 @@ function gulpWatch() {
 	gulp.watch(path.watch.data, gulp.series(gulpPug));
 }
 
-const dev = gulp.series(clean, gulp.parallel(gulpSass, gulpHTML, gulpPug, gulpFonts, gulpFavicon, gulpJS, gulpImages)),
+const dev = gulp.series(clean, gulp.parallel(gulpSass, gulpHTML, gulpPug, gulpJS)),
 	build = gulp.series(clean, gulp.parallel(gulpSass, gulpHTML, gulpFonts, gulpFavicon, gulpJS, gulpImages));
 
 exports.default = build;
 exports.watch = gulp.series(build, gulpWatch);
 exports.dev = gulp.series(dev, gulpWatch);
+exports.elem = gulp.parallel(gulpFonts, gulpFavicon, gulpImages);
 exports.clean = clean;
 exports.js = gulpJS;
 exports.img = gulpImages;

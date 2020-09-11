@@ -1,4 +1,4 @@
-extends layout
+extends includes/layout
 
 block title
 	title Главная
@@ -6,7 +6,7 @@ block title
 block content
 			
 	.wrapper
-		include header.pug
+		include includes/header.pug
 
 		main.main
 			section.section.section--page-header
@@ -217,7 +217,7 @@ block content
 											span.btn.btn--inline.btn--inline-post Read More
 												small.btn__plus
 										a.post__link(href="#")
-																			
+				
 			section.section.section--possibly
 				.container.container--large
 					.section__wrap.section__wrap--possibly
@@ -229,4 +229,4 @@ block content
 								a.post.post--link
 									h3.post__title.post__title--link=possibly[i]
 
-		include footer.pug
+		include includes/footer.pug

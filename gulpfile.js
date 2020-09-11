@@ -28,7 +28,7 @@ const dirBuild = 'build',
 			js: dirBuild + '/js'
 		},
 		src: {
-			html: dirSrc + '/template/*.html',
+			html: dirSrc + '/template/!(header|sprite|footer|layout).html',
 			css: dirSrc + '/css/style.scss',
 			pug: dirSrc + '/pug/**/*.pug',
 			fonts: dirSrc + '/fonts/**/*',

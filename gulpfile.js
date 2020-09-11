@@ -12,6 +12,9 @@ const gulp = require('gulp'),
 	minify = require('gulp-minify'),
 	cleanCSS = require('gulp-clean-css'),
 	rename = require('gulp-rename'),
+	jp2000 = require('gulp-jpeg-2000'),
+	webp = require('gulp-webp'),
+	jxr = require('gulp-jpeg-xr'),
 	browserSync = require('browser-sync').create();
 
 /* settings */
@@ -34,6 +37,7 @@ const dirBuild = 'build',
 			fonts: dirSrc + '/fonts/**/*',
 			favicon: dirSrc + '/favicon/*',
 			img: dirSrc + '/img/**/*',
+			imgNF: dirSrc + '/img/**/*.{jpg,jpeg,png}',
 			js: dirSrc + '/js/script.js',
 			data: dirSrc + '/data/data.json'
 		},
@@ -106,6 +110,19 @@ function gulpImages() {
 			imagemin.optipng(),
 			imagemin.svgo()
 		]))
+		.pipe(gulp.dest(path.build.img))
+		.pipe(gulp.src(path.src.imgNF))
+		.pipe(jp2000())
+		.pipe(gulp.dest(path.build.img))
+		.pipe(gulp.src(path.src.imgNF))
+		.pipe(webp({
+			quality: 70
+		}))
+		.pipe(gulp.dest(path.build.img))
+		.pipe(gulp.src(path.src.imgNF))
+		.pipe(jxr(
+			['-truecolours', '-tile', '32']
+		))
 		.pipe(gulp.dest(path.build.img));
 }
 

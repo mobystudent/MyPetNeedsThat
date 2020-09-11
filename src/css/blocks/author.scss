@@ -1,71 +1,177 @@
 .author {
-	display: grid;
-	grid-template-columns: 1fr 3fr;
-
-	&__avatar {
-		margin-right: 25px;
-		width: 180px;
-		height: 180px;
-		border-radius: 50%;
-		border: 13px solid $lightWhiteGreen;
-		grid-column: 1/2;
-		grid-row: 1/3;
-		overflow: hidden;
-
-		@media screen and (max-width: 1023px) {
-			width: 150px;
-			height: 150px;
+	&__item {
+		&--content {
+			display: grid;
+			grid-template-columns: 1fr 3fr;
 		}
 
-		@media screen and (max-width: 767px) {
+		&--review {
+			display: grid;
+			grid-template-columns: 1fr 8fr;
+			margin-bottom: 55px;
+
+			@media screen and (max-width: 767px) {
+				padding: 0 10px;
+				margin-bottom: 35px;
+			}
+
+			@media screen and (max-width: 374px) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	&__avatar {
+		&--content {
+			width: 180px;
+			height: 180px;
+			border-radius: 50%;
+			margin-right: 25px;
+			border: 13px solid $lightWhiteGreen;
+			grid-column: 1/2;
+			grid-row: 1/3;
+			overflow: hidden;
+
+			@media screen and (max-width: 1023px) {
+				width: 150px;
+				height: 150px;
+			}
+
+			@media screen and (max-width: 767px) {
+				width: 90px;
+				height: 90px;
+				border-width: 10px;
+				grid-row: 1/2;
+				margin-bottom: 10px;
+				margin-right: 20px;
+			}
+		}
+
+		&--review {
 			width: 90px;
 			height: 90px;
-			border-width: 10px;
-			grid-row: 1/2;
-			margin-bottom: 10px;
-			margin-right: 20px;
+			grid-column: 1/2;
+			grid-row: 1/3;
+			border-radius: 50%;
+			border: 13px solid $lightWhiteGreen;
+			overflow: hidden;
+			margin-right: 15px;
+
+			@media screen and (max-width: 767px) {
+				margin-bottom: 35px;
+			}
+
+			@media screen and (max-width: 374px) {
+				margin-right: 20px;
+				border-width: 10px;
+			}
 		}
 	}
 
 	&__header {
-		margin-bottom: 15px;
 		grid-row: 1/2;
 		grid-column: 2;
-		display: flex;
-		flex-flow: column;
+		margin-bottom: 15px;
+
+		&--content {
+			display: flex;
+			flex-flow: column;
+		}
+
+		&--review {
+			padding-top: 5px;
+
+			@media screen and (max-width: 767px) {
+				padding-top: 0;
+				margin-bottom: 40px;
+			}
+
+			@media screen and (max-width: 374px) {
+				margin-bottom: 30px;
+			}
+		}
 	}
 
 	&__name {
-		font: 22px/150% $ProximaNovaSoftBold;
-		color: $darkerGreen;
-		text-transform: capitalize;
-		display: inline-block;
+		&--content {
+			font: 22px/150% $ProximaNovaSoftBold;
+			color: $darkerGreen;
+			text-transform: capitalize;
+			display: inline-block;
 
-		@media screen and (max-width: 767px) {
-			font-size: 18px;
-			margin-bottom: 5px;
+			@media screen and (max-width: 767px) {
+				font-size: 18px;
+				margin-bottom: 5px;
+			}
+		}
+
+		&--review {
+			color: $darkDimGreen;
+			text-transform: capitalize;
 		}
 	}
 
 	&__position {
-		font: 16px/150% $ProximaNovaSoftBold;
+		&--content {
+			font: 16px/150% $ProximaNovaSoftBold;
+			color: $dimGreen;
+		}
+	}
+
+	&__title {
+		display: flex;
+		font: 20px/150% $ProximaNovaSoftBold;
+		margin-bottom: 5px;
+
+		@media screen and (max-width: 1023px) {
+			font-size: 18px;
+		}
+
+		@media screen and (max-width: 767px) {
+			flex-flow: column;
+		}
+
+		@media screen and (max-width: 374px) {
+			font-size: 16px;
+			line-height: 140%;
+		}
+	}
+
+	&__guide {
 		color: $dimGreen;
+		margin-right: 5px;
+
+		@media screen and (max-width: 767px) {
+			margin-right: 0;
+		}
 	}
 
 	&__content {
-		grid-column: 2;
-		grid-row: 2;
+		&--content {
+			grid-column: 2;
+			grid-row: 2;
 
-		@media screen and (max-width: 767px) {
-			grid-column: 1/3;
-			max-height: 100px;
+			@media screen and (max-width: 767px) {
+				grid-column: 1/3;
+				max-height: 100px;
+				overflow: hidden;
+				margin-bottom: 25px;
+			}
+		}
+
+		&--review {
 			overflow: hidden;
-			margin-bottom: 25px;
+
+			@media screen and (max-width: 767px) {
+				max-height: 100px;
+			}
 		}
 	}
 
 	&__descrip {
-		font: 16px/150% $ProximaNovaSoftRegular;
-		color: $darkGreen;
+		&--content {
+			font: 16px/150% $ProximaNovaSoftRegular;
+			color: $darkGreen;
+		}
 	}
 }

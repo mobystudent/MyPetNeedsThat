@@ -43,17 +43,17 @@ block content
 			section.section.section--review
 				.container.container--small
 					.section__wrap.section__wrap--review
-						article.review
-							.review__author
-								picture.review__avatar.img
+						.author.author--review
+							.author__item.author__item--review
+								picture.author__avatar.author__avatar--review.img
 									source.img__item(srcset="img/avatar.webp" type="image/webp")
 									source.img__item(srcset="img/avatar.jp2" type="image/jp2")
 									img.img__item(src="img/avatar.png" alt="user avatar")
-								.review__wrap
-									p.review__user
-										span.review__guide Your guide to this review today is by veterinarian
-										span.review__name Dr. Tracy douglas
-									time.time.time--review(datetime="17:06") Published 17:06 pm
+								header.author__header.author__header--review
+									p.author__title
+										span.author__guide Your guide to this review today is by veterinarian
+										span.author__name.author__name--review Dr. Tracy douglas
+									time.time.time--author(datetime="17:06") Published 17:06 pm
 								a.btn.btn--inline.btn--inline-review(href="#") Hide Contects
 									small.btn__plus
 								
@@ -65,8 +65,8 @@ block content
 									
 										li.recommend__item=recommend[i]
 									
-							.review__descrip
-								p.text.text--main Dog shampoos are important #[span.highlight canine care products] that are geared primarily for the maintenance of their hygiene. Some products actually come with different formulations to help in the control and management of pests like fleas and ticks. However useful, some canine shampoos contain harsh ingredients that may pose a threat to your #[span.highlight pet’s health]. It is therefore, important for you to learn how to choose the correct hair care product for your pet. We have researched the market for the best dog shampoo to help you get started.
+							.author__content.author__content--review
+								p.author__descrip.author__descrip--review.text.text--main Dog shampoos are important #[span.highlight canine care products] that are geared primarily for the maintenance of their hygiene. Some products actually come with different formulations to help in the control and management of pests like fleas and ticks. However useful, some canine shampoos contain harsh ingredients that may pose a threat to your #[span.highlight pet’s health]. It is therefore, important for you to learn how to choose the correct hair care product for your pet. We have researched the market for the best dog shampoo to help you get started.
 								
 			section.section.section--shampoo
 				.container.container--large
@@ -168,18 +168,19 @@ block content
 											svg.icon.icon--social-author
 												use.icon__item(xlink:href=`#${socialAuthor[i]}`)
 							
-						article.author
-							picture.author__avatar.img
-								source.img__item(srcset="img/avatar.png" type="image/webp")
-								source.img__item(srcset="img/avatar.png" type="image/jp2")
-								img.img__item(src="img/avatar.png" alt="avatar")
-							header.author__header
-								span.author__name dr. Tracy Douglas
-								span.author__position General Veterinarian
-							.author__content
-								p.author__descrip General Practice Veterinarian, currently working at the Glenwood Veterinary Clinic, Glenwood Springs, Colorado. #[br]Dr. Douglas began her veterinary career as a Veterinary Nurse in Highton Veterinary Clinic, Highton Victoria, and then as an Emergency Veterinarian in Uintah Pet Emergency, Colorado Springs, Colorado. Tracy is particularly interested in surgery, neurology and internal medicine, which gives her a well-rounded knowledge on animal health and well-being. She received her Doctorate of Veterinary Medicine from the University of Melbourne, while her undergraduate bachelor of science is from the United States Military Academy at West Point, New York.
-							span.btn.btn--inline.btn--inline-author Read More
-								small.btn__plus
+						article.author.author--content
+							.author__item.author__item--content
+								picture.author__avatar.author__avatar--content.img
+									source.img__item(srcset="img/avatar.png" type="image/webp")
+									source.img__item(srcset="img/avatar.png" type="image/jp2")
+									img.img__item(src="img/avatar.png" alt="avatar")
+								header.author__header.author__header--content
+									span.author__name.author__name--content dr. Tracy Douglas
+									span.author__position.author__position--content General Veterinarian
+								.author__content.author__content--content
+									p.author__descrip.author__descrip--content General Practice Veterinarian, currently working at the Glenwood Veterinary Clinic, Glenwood Springs, Colorado. #[br]Dr. Douglas began her veterinary career as a Veterinary Nurse in Highton Veterinary Clinic, Highton Victoria, and then as an Emergency Veterinarian in Uintah Pet Emergency, Colorado Springs, Colorado. Tracy is particularly interested in surgery, neurology and internal medicine, which gives her a well-rounded knowledge on animal health and well-being. She received her Doctorate of Veterinary Medicine from the University of Melbourne, while her undergraduate bachelor of science is from the United States Military Academy at West Point, New York.
+								span.btn.btn--inline.btn--inline-author Read More
+									small.btn__plus
 								
 			section.section.section--faq.faq
 				.container.container--large

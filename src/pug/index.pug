@@ -33,8 +33,8 @@ block content
 											use.icon__item(xlink:href=`#${prizeIcon}`)
 									h3.prize__title=prizeTitle
 									picture.prize__img.img
-										source(srcset=`img/${prizeImg}.webp` type="image/webp")
-										source(srcset=`img/${prizeImg}.jp2` type="image/jp2")
+										source.img__item(srcset=`img/${prizeImg}.webp` type="image/webp")
+										source.img__item(srcset=`img/${prizeImg}.jp2` type="image/jp2")
 										img.img__item(src=`img/${prizeImg}.png` alt=`${prizeImg}`)
 									p.prize__descrip=prizeDescrip
 									span.btn.btn--main check latest price
@@ -46,8 +46,8 @@ block content
 						article.review
 							.review__author
 								picture.review__avatar.img
-									source(srcset="img/avatar.webp" type="image/webp")
-									source(srcset="img/avatar.jp2" type="image/jp2")
+									source.img__item(srcset="img/avatar.webp" type="image/webp")
+									source.img__item(srcset="img/avatar.jp2" type="image/jp2")
 									img.img__item(src="img/avatar.png" alt="user avatar")
 								.review__wrap
 									p.review__user
@@ -84,8 +84,8 @@ block content
 								.shampoo__content
 									.shampoo__wrap-img
 										picture.shampoo__img.img
-											source(srcset=`img/${shampooImg}.webp` type="image/webp")
-											source(srcset=`img/${shampooImg}.jp2` type="image/jp2")
+											source.img__item(srcset=`img/${shampooImg}.webp` type="image/webp")
+											source.img__item(srcset=`img/${shampooImg}.jp2` type="image/jp2")
 											img.img__item(src=`img/${shampooImg}.png` alt=`${shampooImg}`)
 									h3.shampoo__title.shampoo__title--main=shampooTitle
 									p.shampoo__descrip.text.text--main=shampooDescrip
@@ -170,8 +170,8 @@ block content
 							
 						article.author
 							picture.author__avatar.img
-								source(srcset="img/avatar.png" type="image/webp")
-								source(srcset="img/avatar.png" type="image/jp2")
+								source.img__item(srcset="img/avatar.png" type="image/webp")
+								source.img__item(srcset="img/avatar.png" type="image/jp2")
 								img.img__item(src="img/avatar.png" alt="avatar")
 							header.author__header
 								span.author__name dr. Tracy Douglas
@@ -217,8 +217,8 @@ block content
 								
 									article.post.post--item
 										picture.post__img.img
-											source(srcset=`img/${postImg}.webp` type="image/webp")
-											source(srcset=`img/${postImg}.jp2` type="image/jp2")
+											source.img__item(srcset=`img/${postImg}.webp` type="image/webp")
+											source.img__item(srcset=`img/${postImg}.jp2` type="image/jp2")
 											img.img__item(src=`img/${postImg}.png` alt=`${postImg}`)
 										.post__content
 											.post__wrap

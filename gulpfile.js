@@ -14,7 +14,6 @@ const gulp = require('gulp'),
 	rename = require('gulp-rename'),
 	jp2000 = require('gulp-jpeg-2000'),
 	webp = require('gulp-webp'),
-	jxr = require('gulp-jpeg-xr'),
 	browserSync = require('browser-sync').create();
 
 /* settings */
@@ -118,11 +117,6 @@ function gulpImages() {
 		.pipe(webp({
 			quality: 70
 		}))
-		.pipe(gulp.dest(path.build.img))
-		.pipe(gulp.src(path.src.imgNF))
-		.pipe(jxr(
-			['-truecolours', '-tile', '32']
-		))
 		.pipe(gulp.dest(path.build.img));
 }
 
@@ -152,11 +146,8 @@ function gulpWatch() {
 	});
 
 	gulp.watch(path.watch.css, gulp.series(gulpSass));
-	gulp.watch(path.watch.fonts, gulp.series(gulpFonts));
 	gulp.watch(path.watch.pug, gulp.series(gulpPug));
 	gulp.watch(path.watch.html, gulp.series(gulpHTML));
-	gulp.watch(path.watch.img, gulp.series(gulpImages));
-	gulp.watch(path.watch.favicon, gulp.series(gulpFavicon));
 	gulp.watch(path.watch.js, gulp.series(gulpJS));
 	gulp.watch(path.watch.data, gulp.series(gulpPug));
 }

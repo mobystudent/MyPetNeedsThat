@@ -16,6 +16,12 @@ const gulp = require('gulp'),
 	webp = require('gulp-webp'),
 	browserSync = require('browser-sync').create();
 
+/* fonts */
+const ttf2svg = require('gulp-ttf-svg'),
+	ttf2woff = require('gulp-ttf2woff'),
+	ttf2woff2 = require('gulp-ttf2woff2'),
+	ttf2eot = require('gulp-ttf2eot');
+
 /* settings */
 const dirBuild = 'build',
 	dirSrc = 'src',
@@ -33,7 +39,7 @@ const dirBuild = 'build',
 			html: dirSrc + '/template/*.html',
 			css: dirSrc + '/css/style.scss',
 			pug: dirSrc + '/pug/**/*.pug',
-			fonts: dirSrc + '/fonts/**/*',
+			fonts: dirSrc + '/fonts/**/*.{ttf,otf}',
 			favicon: dirSrc + '/favicon/*',
 			img: dirSrc + '/img/**/*',
 			imgNF: dirSrc + '/img/**/*.{jpg,jpeg,png}',
@@ -80,6 +86,17 @@ function gulpSass() {
 /* copy fonts in build dir */
 function gulpFonts() {
 	return gulp.src(path.src.fonts)
+		.pipe(gulp.dest(path.build.fonts))
+		.pipe(ttf2svg())
+		.pipe(gulp.dest(path.build.fonts))
+		.pipe(gulp.src(path.src.fonts))
+		.pipe(ttf2woff())
+		.pipe(gulp.dest(path.build.fonts))
+		.pipe(gulp.src(path.src.fonts))
+		.pipe(ttf2woff2())
+		.pipe(gulp.dest(path.build.fonts))
+		.pipe(gulp.src(path.src.fonts))
+		.pipe(ttf2eot())
 		.pipe(gulp.dest(path.build.fonts));
 }
 
@@ -152,13 +169,13 @@ function gulpWatch() {
 	gulp.watch(path.watch.data, gulp.series(gulpPug));
 }
 
-const dev = gulp.series(clean, gulp.parallel(gulpSass, gulpHTML, gulpPug, gulpJS)),
-	build = gulp.series(clean, gulp.parallel(gulpSass, gulpHTML, gulpFonts, gulpFavicon, gulpJS, gulpImages));
+const dev = gulp.series(clean, gulp.parallel(gulpSass, gulpHTML, gulpPug, gulpJS, gulpFonts, gulpFavicon, gulpImages)),
+	build = gulp.series(clean, gulp.parallel(gulpSass, gulpHTML, gulpJS, gulpFonts, gulpFavicon, gulpImages));
 
 exports.default = build;
 exports.watch = gulp.series(build, gulpWatch);
 exports.dev = gulp.series(dev, gulpWatch);
-exports.elem = gulp.parallel(gulpFonts, gulpFavicon, gulpImages);
+exports.elem = gulp.series(gulp.parallel(gulpFonts, gulpFavicon, gulpImages));
 exports.clean = clean;
 exports.js = gulpJS;
 exports.img = gulpImages;

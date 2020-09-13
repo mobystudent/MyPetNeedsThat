@@ -3,24 +3,33 @@
 const gulp = require('gulp'),
 	del = require('del'),
 	pug = require('gulp-pug'),
-	imagemin = require('gulp-imagemin'),
-	autoprefixer = require('gulp-autoprefixer'),
-	sass = require('gulp-sass'),
-	groupcmq = require('gulp-group-css-media-queries'),
 	sourcemaps = require('gulp-sourcemaps'),
 	fs = require('fs'),
-	minify = require('gulp-minify'),
-	cleanCSS = require('gulp-clean-css'),
 	rename = require('gulp-rename'),
-	jp2000 = require('gulp-jpeg-2000'),
-	webp = require('gulp-webp'),
 	browserSync = require('browser-sync').create();
+
+/* styles */
+const autoprefixer = require('gulp-autoprefixer'),
+	sass = require('gulp-sass'),
+	groupcmq = require('gulp-group-css-media-queries'),
+	cleanCSS = require('gulp-clean-css');
+
+/* images */
+const imagemin = require('gulp-imagemin'),
+	jp2000 = require('gulp-jpeg-2000'),
+	webp = require('gulp-webp');
 
 /* fonts */
 const ttf2svg = require('gulp-ttf-svg'),
 	ttf2woff = require('gulp-ttf2woff'),
 	ttf2woff2 = require('gulp-ttf2woff2'),
 	ttf2eot = require('gulp-ttf2eot');
+
+/* scripts */
+const rollup = require('gulp-better-rollup'),
+	commonjs = require('@rollup/plugin-commonjs'),
+	nodeResolve = require('@rollup/plugin-node-resolve'),
+	minify = require('gulp-minify');
 
 /* settings */
 const dirBuild = 'build',
@@ -147,6 +156,11 @@ function gulpFavicon() {
 function gulpJS() {
 	return gulp.src(path.src.js)
 		.pipe(sourcemaps.init())
+		.pipe(rollup({
+			plugins: [commonjs(), nodeResolve()]
+		}, {
+			format: 'umd'
+		}))
 		.pipe(minify({
 			ext: {
 				min: '.min.js'

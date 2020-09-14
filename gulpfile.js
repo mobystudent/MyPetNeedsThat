@@ -72,7 +72,7 @@ function clean() {
 	return del(dirBuild + '/**');
 }
 
-/* coplite sass */
+/* conversion sass */
 function gulpSass() {
 	return gulp.src(path.src.css)
 		.pipe(sourcemaps.init())
@@ -92,7 +92,7 @@ function gulpSass() {
 		.pipe(gulp.dest(path.build.css));
 }
 
-/* copy fonts in build dir */
+/* conversion fonts */
 function gulpFonts() {
 	return gulp.src(path.src.fonts)
 		.pipe(gulp.dest(path.build.fonts))
@@ -110,7 +110,7 @@ function gulpFonts() {
 }
 
 
-/* coplite pug files in html folder */
+/* conversion pug */
 function gulpPug() {
 	const dataFromFile = JSON.parse(fs.readFileSync(path.src.data));
 	return gulp.src(path.src.pug)
@@ -152,12 +152,15 @@ function gulpFavicon() {
 		.pipe(gulp.dest(path.build.favicon));
 }
 
-/* compile js bundle */
+/* conversion js bundle */
 function gulpJS() {
 	return gulp.src(path.src.js)
 		.pipe(sourcemaps.init())
 		.pipe(rollup({
-			plugins: [commonjs(), nodeResolve()]
+			plugins: [
+				commonjs(),
+				nodeResolve()
+			]
 		}, {
 			format: 'umd'
 		}))

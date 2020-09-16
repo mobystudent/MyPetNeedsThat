@@ -29,6 +29,9 @@ const ttf2svg = require('gulp-ttf-svg'),
 const rollup = require('gulp-better-rollup'),
 	commonjs = require('@rollup/plugin-commonjs'),
 	nodeResolve = require('@rollup/plugin-node-resolve'),
+	babel = require('rollup-plugin-babel'),
+	// typescript = require('gulp-typescript'),
+	typescript = require('@rollup/plugin-typescript'),
 	minify = require('gulp-minify');
 
 /* settings */
@@ -42,7 +45,8 @@ const dirBuild = 'build',
 			fonts: dirBuild + '/fonts',
 			favicon: dirBuild + '/favicon',
 			img: dirBuild + '/img',
-			js: dirBuild + '/js'
+			js: dirBuild + '/js',
+			ts: dirSrc + '/js'
 		},
 		src: {
 			html: dirSrc + '/template/*.html',
@@ -53,6 +57,8 @@ const dirBuild = 'build',
 			img: dirSrc + '/img/**/*',
 			imgNF: dirSrc + '/img/**/*.{jpg,jpeg,png}',
 			js: dirSrc + '/js/script.js',
+			ts: dirSrc + '/ts/script.ts',
+			// ts: dirSrc + '/ts/main.ts',
 			data: dirSrc + '/data/data.json'
 		},
 		watch: {
@@ -63,6 +69,7 @@ const dirBuild = 'build',
 			favicon: dirSrc + '/favicon/*',
 			img: dirSrc + '/img/**/*',
 			js: dirSrc + '/js/**/*.js',
+			ts: dirSrc + '/ts/**/*.ts',
 			data: dirSrc + '/data/**/*.json'
 		}
 	};
@@ -156,14 +163,6 @@ function gulpFavicon() {
 function gulpJS() {
 	return gulp.src(path.src.js)
 		.pipe(sourcemaps.init())
-		.pipe(rollup({
-			plugins: [
-				commonjs(),
-				nodeResolve()
-			]
-		}, {
-			format: 'umd'
-		}))
 		.pipe(minify({
 			ext: {
 				min: '.min.js'
@@ -171,6 +170,45 @@ function gulpJS() {
 		}))
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest(path.build.js));
+}
+
+/* conversion ts in js */
+function gulpTS(){
+	return gulp.src(path.src.ts)
+		.pipe(sourcemaps.init())
+		.pipe(rollup({
+			plugins: [
+				commonjs(),
+				nodeResolve(),
+				typescript({
+					// outFile: './src/ts/script.js',
+					// outDir: "./ts/types",
+					// outDir: "./ts/types",
+					// declarationDir: "./src/ts/types",
+					// declarationDir: ".types",
+					noImplicitAny: false,
+					module: 'esnext',
+					lib: ["es6", "dom"],
+					moduleResolution: 'node',
+					// emitDeclarationOnly: true,
+					// isolatedModules: true,
+					target: 'es5',
+					// strict: true,
+					// declaration: true,
+					sourceMap: true
+				}),
+				babel({
+					presets: ['@babel/preset-env']
+				})
+			]}, {
+				format: 'umd'
+			}
+		))
+		.pipe(rename({
+			extname: ".js"
+		}))
+		.pipe(sourcemaps.write('.'))
+		.pipe(gulp.dest(path.build.ts))
 }
 
 /* watch src files and show changes in browser */
@@ -183,10 +221,11 @@ function gulpWatch() {
 	gulp.watch(path.watch.pug, gulp.series(gulpPug));
 	gulp.watch(path.watch.html, gulp.series(gulpHTML));
 	gulp.watch(path.watch.js, gulp.series(gulpJS));
+	gulp.watch(path.watch.ts, gulp.series(gulpTS, gulpJS));
 	gulp.watch(path.watch.data, gulp.series(gulpPug));
 }
 
-const dev = gulp.series(clean, gulp.parallel(gulpSass, gulpHTML, gulpPug, gulpJS, gulpFonts, gulpFavicon, gulpImages)),
+const dev = gulp.series(clean, gulp.parallel(gulpSass, gulpHTML, gulpPug, gulpJS, gulpTS, gulpFonts, gulpFavicon, gulpImages)),
 	build = gulp.series(clean, gulp.parallel(gulpSass, gulpHTML, gulpJS, gulpFonts, gulpFavicon, gulpImages));
 
 exports.default = build;
@@ -195,5 +234,6 @@ exports.dev = gulp.series(dev, gulpWatch);
 exports.elem = gulp.series(gulp.parallel(gulpFonts, gulpFavicon, gulpImages));
 exports.clean = clean;
 exports.js = gulpJS;
+exports.ts = gulp.series(gulpTS, gulpJS);
 exports.img = gulpImages;
 exports.fonts = gulpFonts;

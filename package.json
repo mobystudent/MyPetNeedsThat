@@ -20,6 +20,10 @@
     "@babel/preset-env": "^7.8.7",
     "@rollup/plugin-commonjs": "^15.0.0",
     "@rollup/plugin-node-resolve": "^7.0.0",
+    "@rollup/plugin-typescript": "^6.0.0",
+    "@types/dotdotdot": "^1.6.35",
+    "@types/jquery": "^3.5.1",
+    "@types/slick-carousel": "^1.6.34",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "fs": "0.0.1-security",
@@ -39,9 +43,15 @@
     "gulp-ttf2eot": "^1.1.2",
     "gulp-ttf2woff": "^1.1.1",
     "gulp-ttf2woff2": "^3.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "gulp-webp": "^4.0.1",
     "rollup": "^2.26.11",
-    "rollup-plugin-babel": "^4.4.0"
+    "rollup-plugin-babel": "^4.4.0",
+    "tslib": "^2.0.1",
+    "typescript": "^4.0.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "jquery.dotdotdot": "^3.2.3",
+    "perfect-scrollbar": "^1.5.0"
+  }
 }

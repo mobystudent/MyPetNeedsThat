@@ -1,25 +1,25 @@
 export default class Slider {
-	constructor(){
+	private sliderPrize: JQuery<HTMLElement> = $('.slider--prize .slider__content');
+	private sliderPost: JQuery<HTMLElement> = $('.slider--post .slider__content');
+	private prizeBreakPoint: number = 1024;
+	private postBreakPoint: number = 768;
+
+	constructor() {
 		this.init();
 	}
 
-	init(){
-		this.sliderPrize = $('.slider--prize .slider__content'),
-		this.sliderPost = $('.slider--post .slider__content'),
-		this.prizeBreakPoint = 1024,
-		this.postBreakPoint = 768;
-
+	private init() {
 		this.__slidersList();
 
 		$(window).resize(() => this.__slidersList());
 	}
 
-	__slidersList() {
+	private __slidersList() {
 		this.__sliderItem(this.sliderPost, this.postBreakPoint);
 		this.__sliderItem(this.sliderPrize, this.prizeBreakPoint);
 	}
 
-	__sliderItem(sliderName, breakPoint) {
+	private __sliderItem(sliderName: JQuery<HTMLElement>, breakPoint: number) {
 		if(!sliderName.hasClass('slick-initialized') && window.innerWidth < breakPoint)
 			sliderName.slick({
 				infinite: false,

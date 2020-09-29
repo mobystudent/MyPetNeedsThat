@@ -36,7 +36,8 @@ export default class Slider {
 					}
 				]
 			});
-		else if(sliderName.hasClass('slick-initialized') && window.innerWidth >= breakPoint)
+		else if(sliderName.hasClass('slick-initialized') && window.innerWidth >= breakPoint) {
 			sliderName.slick('unslick');
+		}
 	}
 }

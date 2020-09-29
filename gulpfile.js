@@ -28,6 +28,7 @@ const ttf2svg = require('gulp-ttf-svg'),
 /* scripts */
 const rollup = require('gulp-better-rollup'),
 	commonjs = require('@rollup/plugin-commonjs'),
+	babel = require('rollup-plugin-babel'),
 	nodeResolve = require('@rollup/plugin-node-resolve'),
 	minify = require('gulp-minify');
 
@@ -159,7 +160,12 @@ function gulpJS() {
 		.pipe(rollup({
 			plugins: [
 				commonjs(),
-				nodeResolve()
+				nodeResolve(),
+				babel({
+					presets: [
+						"@babel/env"
+					]
+				})
 			]
 		}, {
 			format: 'umd'

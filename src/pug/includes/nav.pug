@@ -1,18 +1,17 @@
 nav.nav
-	.nav__tab All Categories
+	.nav__tab
+		| All Categories
 	.nav__content
 		.nav__wrap
 			
-			- for (let i = 0; i < menu.length; i++)
-			
-				- const { title: titleMenu = '', pages: menuPages = [], icon: menuIcon = '' } = menu[i];
+			each menuItem in menu
+				- const { title: titleMenu = '', pages: menuPages = [], icon: menuIcon = '' } = menuItem;
 				
 				article.menu.menu--header
 					h3.menu__title
 						span.menu__text(class=`menu__text--${menuIcon}`)=titleMenu
 					ul.menu__list.menu__list--header
 				
-						- for (let j = 0; j < menuPages.length; j++)
-				
+						each menuPagesItem in menuPages
 							li.menu__item.menu__item--header
-								a.menu__link.menu__link--header(href="#")=menuPages[j]
+								a.menu__link.menu__link--header(href="#")=menuPagesItem

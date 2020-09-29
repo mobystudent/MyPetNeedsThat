@@ -1,22 +1,15 @@
 .content {
 	h2 {
-		font: 38px/120% $ProximaNovaSoftBold;
-		letter-spacing: .02em;
-		color: $darkGreen;
+		@extend .section__title;
+
 		margin-bottom: 30px;
 
 		@media screen and (max-width: 1023px) {
-			font-size: 32px;
 			margin-bottom: 20px;
-		}
-
-		@media screen and (max-width: 767px) {
-			font-size: 24px;
-			margin-bottom: 25px;
 		}
 
 		@media screen and (max-width: 374px) {
-			margin-bottom: 20px;
+			margin-bottom: 15px;
 		}
 	}
 
@@ -26,8 +19,12 @@
 		&:not(:last-child) {
 			margin-bottom: 25px;
 
-			@media screen and (max-width: 374px) {
+			@media screen and (max-width: 1023px) {
 				margin-bottom: 15px;
+			}
+
+			@media screen and (max-width: 767px) {
+				margin-bottom: 10px;
 			}
 		}
 	}
@@ -67,14 +64,23 @@
 	}
 
 	.video {
+		position: relative;
 		width: 100%;
-		min-height: 300px;
+		padding-top: 40%;
 		margin-bottom: 35px;
 		background: $black;
 
 		@media screen and (max-width: 767px) {
 			min-height: 150px;
 			margin-bottom: 30px;
+		}
+
+		&__iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
 		}
 	}
 

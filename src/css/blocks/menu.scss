@@ -9,15 +9,7 @@
 
 			@media screen and (max-width: 1023px) {
 				margin-right: 0;
-				margin-bottom: 25px;
-			}
-
-			@media screen and (max-width: 767px) {
-				margin-bottom: 35px;
-			}
-
-			@media screen and (max-width: 374px) {
-				margin-bottom: 30px;
+				margin-bottom: 20px;
 			}
 		}
 
@@ -36,13 +28,8 @@
 		@media screen and (max-width: 767px) {
 			order: 1;
 			display: flex;
-			margin-bottom: 50px;
-		}
-
-		@media screen and (max-width: 374px) {
-			flex-flow: column;
-			align-items: center;
-			margin-bottom: 25px;
+			justify-content: center;
+			margin-bottom: 20px;
 		}
 	}
 
@@ -50,7 +37,7 @@
 		margin-bottom: 15px;
 
 		@media screen and (max-width: 767px) {
-			margin-bottom: 5px;
+			margin-bottom: 10px;
 			text-align: center;
 		}
 	}
@@ -65,7 +52,7 @@
 		position: relative;
 		transition: opacity .25s ease-in-out;
 
-		@media screen and (max-width: 374px) {
+		@media screen and (max-width: 1023px) {
 			font-size: 20px;
 		}
 
@@ -135,26 +122,15 @@
 
 		&--footer {
 			@media screen and (max-width: 767px) {
-				display: flex;
-				flex-flow: column;
-				width: 50%;
+				column-count: 2;
+				column-gap: 30px;
 			}
 
 			@media screen and (max-width: 374px) {
 				width: 100%;
-				align-items: center;
-			}
-
-			&-top {
-				margin-bottom: 5px;
-
-				@media screen and (max-width: 767px) {
-					margin-bottom: 0;
-				}
-
-				@media screen and (max-width: 374px) {
-					margin-bottom: 5px;
-				}
+				text-align: center;
+				column-count: 1;
+				column-gap: 0;
 			}
 		}
 	}
@@ -181,7 +157,7 @@
 			&:not(:last-child) {
 				margin-bottom: 7px;
 
-				@media screen and (max-width: 767px) {
+				@media screen and (max-width: 1023px) {
 					margin-bottom: 5px;
 				}
 			}
@@ -205,8 +181,11 @@
 			font: 18px/150% $ProximaNovaSoftBold;
 			text-transform: uppercase;
 
-			@media screen and (max-width: 374px) {
+			@media screen and (max-width: 1023px) {
 				font-size: 16px;
+			}
+
+			@media screen and (max-width: 767px) {
 				line-height: 140%;
 			}
 		}

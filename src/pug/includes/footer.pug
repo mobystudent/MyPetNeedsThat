@@ -5,43 +5,42 @@ footer.footer
 				img.img__item(src="img/logo.png" alt="logo")
 		.footer__content
 			.footer__part.footer__part--left
-				h4.footer__title.footer__title--main The World’s Best Product Reviews, Aquipments and Advice For Your Pets
-				p.footer__descrip MyPetsNeedThat.com is a participant in Amazon Services LLC Associates Program, an affiliate advertising program designed to provide means for sites to earn advertising and linking to amazon.com
+				h4.footer__title.footer__title--main
+					| The World’s Best Product Reviews, Aquipments and Advice For Your Pets
+				p.footer__descrip
+					| MyPetsNeedThat.com is a participant in Amazon Services LLC Associates Program, an affiliate advertising program designed to provide means for sites to earn advertising and linking to amazon.com
 			.footer__part.footer__part--right
 				.footer__contacts
 					article.contacts.footer__block.footer__block--left
-						h3.contacts__title Contacts
+						h3.contacts__title
+							| Contacts
 						address.contacts__item.contacts__item--address
-							span.contacts__text 7000 Stinson Hartis Road, Suit
-							span.contacts__text G-6191, Indian Trail, NC 28079, USA 
-						a.contacts__item.contacts__item--phone(href="tel:+16692238682") +1 669-223-8682
+							span.contacts__text
+								| 7000 Stinson Hartis Road, Suit
+							span.contacts__text
+								| G-6191, Indian Trail, NC 28079, USA 
+						a.contacts__item.contacts__item--phone(href="tel:+16692238682")
+							| +1 669-223-8682
 					article.menu.menu--footer
-						ul.menu__list.menu__list--footer.menu__list--footer-top
+						ul.menu__list.menu__list--footer
 							
-							- for (let i = 0; i < 3; i++)
-							
+							each menuFooterItem in menuFooter
 								li.menu__item.menu__item--footer
-									a.menu__link.menu__link--footer(href="#")=menuFooter[i]
-									
-						ul.menu__list.menu__list--footer.menu__list--footer-bot
-							
-							- for (let i = 3; i < menuFooter.length; i++)
-							
-								li.menu__item.menu__item--footer
-									a.menu__link.menu__link--footer(href="#")=menuFooter[i]
-								
+									a.menu__link.menu__link--footer(href="#")=menuFooterItem
+															
 				.footer__social
 					article.social.social--footer.footer__block.footer__block--left
-						h3.social__title.social__title--footer Follow #MyPetsNessThat
+						h3.social__title.social__title--footer
+							| Follow #MyPetsNessThat
 						ul.social__list
 							
 							- const socialFooter = ['fbookF', 'twitF', 'utube', 'instaF', 'pint'];
 							
-							- for (let i = 0; i < socialFooter.length; i++)
-							
+							each socialFooterItem in socialFooter
 								li.social__item.social__item--footer
 									a.social__link.social__link--footer(href="#" target="_blank")
-										svg.icon.icon--social-footer(class=`icon--social-${socialFooter[i]}`)
-											use.icon__item(xlink:href=`#${socialFooter[i]}`)
+										svg.icon.icon--social-footer(class=`icon--social-${socialFooterItem}`)
+											use.icon__item(xlink:href=`#${socialFooterItem}`)
 												
-					a.footer__link(href="#") Protected By
+					a.footer__link(href="#")
+						| Protected By

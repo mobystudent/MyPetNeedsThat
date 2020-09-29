@@ -5,6 +5,7 @@ $(window).on('load', () => {
 
 	breakLinks();
 	showRecommend();
+	showAuthorDescrip();
 	faqAccordion();
 	windowResize();
 	burger();
@@ -20,7 +21,21 @@ function showRecommend() {
 		e.preventDefault();
 
 		$(this).toggleClass("btn--inline-active");
+		$(this).hasClass("btn--inline-active") ? $(this).text("Hide Contects") : $(this).text("Show Contects");
 		$(".recommend").slideToggle();
+	});
+}
+
+function showAuthorDescrip() {
+	$(".btn--inline-author").click(function(e) {
+		e.preventDefault();
+
+		$(".author__content--content").addClass("author__content--content-active");
+		setTimeout(() => {
+			const dotAuthorContent = $(".author__content--content").dotdotdot();
+			dotAuthorContent.API.destroy();
+		}, 250);
+		$(this).hide();
 	});
 }
 
@@ -34,6 +49,7 @@ function faqAccordion() {
 function __clipText() {
 	$(".post__wrap").dotdotdot();
 	$(".review__descrip").dotdotdot();
+	$(".author__content--content").dotdotdot();
 }
 
 function windowResize() {

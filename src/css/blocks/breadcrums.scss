@@ -2,16 +2,16 @@
 	display: flex;
 	margin-bottom: 50px;
 
+	@media screen and (max-width: 1365px) {
+		margin-bottom: 40px;
+	}
+
 	@media screen and (max-width: 1023px) {
 		margin-bottom: 30px;
 	}
 
-	@media screen and (max-width: 767px) {
-		margin-bottom: 65px;
-	}
-
-	@media screen and (max-width: 374px) {
-		margin-bottom: 30px;
+	@media screen and (max-width: 768px) {
+		margin-bottom: 20px;
 	}
 
 	&__link {
@@ -21,7 +21,7 @@
 		opacity: .5;
 		transition: opacity .25s ease-in-out;
 
-		@media screen and (max-width: 374px) {
+		@media screen and (max-width: 768px) {
 			font-size: 14px;
 		}
 
@@ -29,7 +29,7 @@
 			margin-right: 20px;
 			position: relative;
 
-			@media screen and (max-width: 374px) {
+			@media screen and (max-width: 768px) {
 				margin-right: 15px;
 			}
 
@@ -44,7 +44,7 @@
 				background: url("../img/arrow.svg") no-repeat;
 				background-size: cover;
 
-				@media screen and (max-width: 374px) {
+				@media screen and (max-width: 768px) {
 					right: -10px;
 					width: 4px;
 					height: 8px;

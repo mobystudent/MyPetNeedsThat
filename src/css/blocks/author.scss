@@ -10,6 +10,10 @@
 			grid-template-columns: 1fr 8fr;
 			margin-bottom: 55px;
 
+			@media screen and (max-width: 1365px) {
+				margin-bottom: 45px;
+			}
+
 			@media screen and (max-width: 767px) {
 				padding: 0 10px;
 				margin-bottom: 35px;
@@ -45,6 +49,11 @@
 				margin-bottom: 10px;
 				margin-right: 20px;
 			}
+
+			@media screen and (max-width: 374px) {
+				width: 80px;
+				height: 80px;
+			}
 		}
 
 		&--review {
@@ -73,6 +82,10 @@
 		grid-column: 2;
 		margin-bottom: 15px;
 
+		@media screen and (max-width: 1023px) {
+			margin-bottom: 10px;
+		}
+
 		&--content {
 			display: flex;
 			flex-flow: column;
@@ -83,11 +96,6 @@
 
 			@media screen and (max-width: 767px) {
 				padding-top: 0;
-				margin-bottom: 40px;
-			}
-
-			@media screen and (max-width: 374px) {
-				margin-bottom: 30px;
 			}
 		}
 	}
@@ -99,9 +107,12 @@
 			text-transform: capitalize;
 			display: inline-block;
 
+			@media screen and (max-width: 1023px) {
+				font-size: 20px;
+			}
+
 			@media screen and (max-width: 767px) {
 				font-size: 18px;
-				margin-bottom: 5px;
 			}
 		}
 
@@ -115,6 +126,10 @@
 		&--content {
 			font: 16px/150% $ProximaNovaSoftBold;
 			color: $dimGreen;
+
+			@media screen and (max-width: 767px) {
+				font-size: 14px;
+			}
 		}
 	}
 
@@ -123,8 +138,12 @@
 		font: 20px/150% $ProximaNovaSoftBold;
 		margin-bottom: 5px;
 
-		@media screen and (max-width: 1023px) {
+		@media screen and (max-width: 1365px) {
 			font-size: 18px;
+		}
+
+		@media screen and (max-width: 1023px) {
+			line-height: 130%;
 		}
 
 		@media screen and (max-width: 767px) {
@@ -150,12 +169,18 @@
 		&--content {
 			grid-column: 2;
 			grid-row: 2;
+			transition: max-height .5s ease-in-out;
 
 			@media screen and (max-width: 767px) {
 				grid-column: 1/3;
-				max-height: 100px;
+				max-height: 105px;
 				overflow: hidden;
-				margin-bottom: 25px;
+			}
+
+			&-active {
+				@media screen and (max-width: 767px) {
+					max-height: none;
+				}
 			}
 		}
 
@@ -163,7 +188,7 @@
 			overflow: hidden;
 
 			@media screen and (max-width: 767px) {
-				max-height: 100px;
+				max-height: 105px;
 			}
 		}
 	}
@@ -172,6 +197,10 @@
 		&--content {
 			font: 16px/150% $ProximaNovaSoftRegular;
 			color: $darkGreen;
+
+			@media screen and (max-width: 767px) {
+				font-size: 14px;
+			}
 		}
 	}
 }

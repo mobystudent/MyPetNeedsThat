@@ -1,9 +1,11 @@
+include ../data/data
+
 nav.nav
 	.nav__tab
 		| All Categories
 	.nav__content
 		.nav__wrap
-			
+
 			each menuItem in menu
 				- const { title: titleMenu = '', pages: menuPages = [], icon: menuIcon = '' } = menuItem;
 				

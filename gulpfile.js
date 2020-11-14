@@ -4,7 +4,6 @@ const gulp = require('gulp'),
 	del = require('del'),
 	pug = require('gulp-pug'),
 	sourcemaps = require('gulp-sourcemaps'),
-	fs = require('fs'),
 	rename = require('gulp-rename'),
 	browserSync = require('browser-sync').create();
 
@@ -53,8 +52,7 @@ const dirBuild = 'build',
 			favicon: dirSrc + '/favicon/*',
 			img: dirSrc + '/img/**/*',
 			imgNF: dirSrc + '/img/**/*.{jpg,jpeg,png}',
-			js: dirSrc + '/js/script.js',
-			data: dirSrc + '/data/data.json'
+			js: dirSrc + '/js/script.js'
 		},
 		watch: {
 			html: dirSrc + '/template/**/*.html',
@@ -63,8 +61,7 @@ const dirBuild = 'build',
 			fonts: dirSrc + '/fonts/**/*',
 			favicon: dirSrc + '/favicon/*',
 			img: dirSrc + '/img/**/*',
-			js: dirSrc + '/js/**/*.js',
-			data: dirSrc + '/data/**/*.json'
+			js: dirSrc + '/js/**/*.js'
 		}
 	};
 
@@ -113,11 +110,9 @@ function gulpFonts() {
 
 /* conversion pug */
 function gulpPug() {
-	const dataFromFile = JSON.parse(fs.readFileSync(path.src.data));
 	return gulp.src(path.src.pug)
 		.pipe(pug({
-			pretty: true,
-			locals: dataFromFile || {}
+			pretty: true
 		}))
 		.pipe(gulp.dest(path.build.pug));
 }
@@ -189,7 +184,6 @@ function gulpWatch() {
 	gulp.watch(path.watch.pug, gulp.series(gulpPug));
 	gulp.watch(path.watch.html, gulp.series(gulpHTML));
 	gulp.watch(path.watch.js, gulp.series(gulpJS));
-	gulp.watch(path.watch.data, gulp.series(gulpPug));
 }
 
 const dev = gulp.series(clean, gulp.parallel(gulpSass, gulpHTML, gulpPug, gulpJS, gulpFonts, gulpFavicon, gulpImages)),
